@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import { Providers } from "@/redux/providers";
 import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
+import ThemeInitializer from "@/helper/themeInitializer";
+
 // import Footer from "@/components/Footer";
 
 // Define your local fonts
@@ -48,9 +50,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
+        <ThemeInitializer>
           <NextTopLoader color="blue" showSpinner={false} />
           <Header />
           {children}
+        </ThemeInitializer>
         </Providers>
       </body>
     </html>
