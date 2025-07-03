@@ -9,15 +9,15 @@ import BlogPost from "@/database/models/blogpost.Model";
 import Category from "@/database/models/category.Model";
 
 // GET request handler
-export async function GET(request: Request, context: { params: { slug: string } }) {
-  const { slug } = context.params;
-  await db();
-  const singleBlog = await BlogPost.findOne({ slug })
-    .populate("categories", "categoryname")
-    .populate("author", "username");
+// export async function GET(request: Request, context: { params: { slug: string } }) {
+//   const { slug } = context.params;
+//   await db();
+//   const singleBlog = await BlogPost.findOne({ slug })
+//     .populate("categories", "categoryname")
+//     .populate("author", "username");
 
-  return NextResponse.json({ result: singleBlog }, { status: 200 });
-}
+//   return NextResponse.json({ result: singleBlog }, { status: 200 });
+// }
 
 // DELETE request handler
 export async function DELETE(request: Request, context: { params: { slug: string } }) {
