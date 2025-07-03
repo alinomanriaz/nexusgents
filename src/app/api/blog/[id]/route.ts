@@ -27,6 +27,17 @@ export async function DELETE(request: Request, context: { params: { slug: string
   return NextResponse.json({ result: "Blog post deleted successfully" }, { status: 200 });
 }
 
+interface BlogPostFormData {
+  title: string;
+  content: string;
+  author: string;
+  authorImage: string;
+  categories: string;
+  tags: string;
+  status: string;
+  featuredImage?: string;
+}
+
 // PUT request handler
 export async function PUT(request: Request, context: { params: { slug: string } }) {
   const { slug } = context.params;
@@ -35,41 +46,31 @@ export async function PUT(request: Request, context: { params: { slug: string } 
 
   await db();
 
-  let BlogPostData: any = {};
-  const Image = formData.get("featuredImage");
+  const image = formData.get("featuredImage");
+  let featuredImage: string | undefined;
 
-  if (Image === "false") {
-    BlogPostData = {
-      title: formData.get("title"),
-      content: formData.get("content"),
-      author: formData.get("author"),
-      authorImage: formData.get("authorImage"),
-      categories: formData.get("categories"),
-      tags: formData.get("tags"),
-      status: formData.get("status"),
-    };
-  } else {
-    const cnvrtdByteData = await (Image as File).arrayBuffer();
-    const buffer = Buffer.from(cnvrtdByteData);
-    const path = `./public/${timestamp}_${(Image as File).name}`;
+  if (image !== "false") {
+    const convertedByteData = await (image as File).arrayBuffer();
+    const buffer = Buffer.from(convertedByteData);
+    const path = `./public/${timestamp}_${(image as File).name}`;
     await writeFile(path, buffer);
-    const ImgUrl = `/${timestamp}_${(Image as File).name}`;
-
-    BlogPostData = {
-      title: formData.get("title"),
-      content: formData.get("content"),
-      author: formData.get("author"),
-      authorImage: formData.get("authorImage"),
-      categories: formData.get("categories"),
-      tags: formData.get("tags"),
-      status: formData.get("status"),
-      featuredImage: ImgUrl,
-    };
+    featuredImage = `/${timestamp}_${(image as File).name}`;
   }
 
+  const BlogPostData: BlogPostFormData = {
+    title: formData.get("title") as string,
+    content: formData.get("content") as string,
+    author: formData.get("author") as string,
+    authorImage: formData.get("authorImage") as string,
+    categories: formData.get("categories") as string,
+    tags: formData.get("tags") as string,
+    status: formData.get("status") as string,
+    featuredImage,
+  };
+
   const author = await User.findById(BlogPostData.author);
-  const categoryId = JSON.parse(BlogPostData.categories);
-  const categories = await Category.find({ categoryname: { $in: categoryId } });
+  const categoryNames = JSON.parse(BlogPostData.categories);
+  const categories = await Category.find({ categoryname: { $in: categoryNames } });
 
   const newBlogPost = {
     title: BlogPostData.title,
@@ -88,5 +89,8 @@ export async function PUT(request: Request, context: { params: { slug: string } 
     return NextResponse.json({ message: "Blog post not found" }, { status: 404 });
   }
 
-  return NextResponse.json({ message: "Blog post updated successfully", blogPost: updatedPost });
+  return NextResponse.json({
+    message: "Blog post updated successfully",
+    blogPost: updatedPost,
+  });
 }
