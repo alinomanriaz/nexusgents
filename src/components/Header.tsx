@@ -39,7 +39,7 @@ const Header = () => {
                 <nav className='mt-20 mb-10 flex flex-col space-y-1 md:space-y-0 justify-center md:m-0 md:flex-row md:justify-normal md:text-center md:my-0 md:gap-2 md:text-sm'>
 
                   <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/">Home</Link>
-                  {/* <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/blog" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/blog">Blog</Link> */}
+                  <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/blog" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/blog">Blog</Link>
                   <div onClick={() => { setIsactive(!isActive); setSubMenu(true) }} >
                     <div onMouseEnter={() => setSubMenu(true)} className={`${path.startsWith('/services') ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} >Services<GoChevronDown /></div>
                   </div>
