@@ -36,7 +36,7 @@ const Subscription = () => {
         }
     }
     return (
-        <>
+        <section className='flex justify-center items-center '>
             <div className='flex bg-darkmodebtncolor shadow-md relative flex-col h-96 justify-center md:px-20 items-center w-[90%] border rounded-xl px-5 border-neutral-400/10 py-8 overflow-hidden' >
                 <div className='absolute -bottom-28 rounded-full blur-[90px] w-1/2 h-24 bg-gradient'></div>
                 <div className='md:w-[100%] w-full flex flex-col md:gap-4 gap-1 justify-center items-center '>
@@ -61,7 +61,7 @@ const Subscription = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

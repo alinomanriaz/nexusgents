@@ -26,7 +26,7 @@ export const GradientTitle: FC<GradientTitleProps> = ({ text, className }) => {
 
 export const Title: FC<TitleProps> = ({ title, className }) => {
   return (
-    <div className={`${className} md:text-4xl text-2xl w-[90%] font-semibold capitalize text-center`}>
+    <div className={`${className} md:text-4xl text-2xl w-[90%] font-extrabold capitalize text-center`}>
       {title}
     </div>
   )
