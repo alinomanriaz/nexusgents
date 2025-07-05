@@ -64,6 +64,25 @@ const Home = () => {
       features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
     },
   ]
+
+  const satisfycustomer = [
+    {
+      mainheading: '5.0',
+      subheading:'GOOGLE REVIEW',
+      text:'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    },
+    {
+      mainheading: '450+',
+      subheading:'SATISFIED CLIENTS',
+      text:'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    },
+    {
+      mainheading: '1200+',
+      subheading:'COMPLETED PROJECTS',
+      text:'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+    }
+
+  ]
   return (
     <>
       <main className='h-full w-full'>
@@ -91,13 +110,7 @@ const Home = () => {
 
 
 
-        {/* our client logos sliders */}
-        <section className='flex flex-col justify-center items-center h-fit mt-20'>
-          <GradientTitle text='CURATED WORK' />
-          <Title title='Our Client' className='my-6' />
-          <Subtitle subtitle={`Success stories from those who’ve trusted us with their brand and website.`} />
-          <CustomerReviews />
-        </section>
+
 
 
         {/* our virtical slider */}
@@ -135,6 +148,48 @@ const Home = () => {
           </div>
         </section> */}
 
+        {/* <section className='flex flex-col justify-center items-center my-16 h-fit w-full'>
+          <div className='w-11/12 bg-red-500 flex flex-col md:flex-row justify-between items-center mt-20'>
+            
+            <div className='w-full bg-yellow-400 rounded-3xl space-y-6'>
+              <div className='font-extrabold text-4xl'>We are a Result Driven Tech Company</div>
+              <div>
+                <Button className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-md sm:rounded-md'} btname={'Get started'} />
+                <Button className={' w-full sm:w-auto text-black rounded-md sm:rounded-md'} btname={'Get started'} />
+                
+              </div>
+            </div>
+            <div className='w-full bg-yellow-400 rounded-3xl'>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi consequatur tempore maiores? Numquam nostrum ea nihil, quam dicta repellat asperiores fuga tempora assumenda soluta recusandae temporibus minima facilis eaque.</div>
+              <div className='py-2'>
+                <div>
+                  <div className='font-bold text-4xl'>200+</div>
+                  <div className='text-sm'>Successfull Project</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
+
+        <section className='flex flex-col justify-center items-center h-fit w-full'>
+          <div className='w-11/12  flex flex-col md:flex-row justify-evenly items-center'>
+
+            {
+              satisfycustomer.map((data, index) => (
+                <div key={index} className='  rounded-3xl w-[200px] text-center'>
+
+                  <div className='font-extrabold text-[60px]'>{data.mainheading}</div>
+                  <div className='font-bold'>{data.subheading}</div>
+                  <div className='text-sm text-gray-600'>{data.text}</div>
+                </div>
+              ))
+            }
+
+          </div>
+        </section>
+
+
+
         {/* Our features promises */}
         <section className='flex flex-col justify-center items-center my-16 h-fit w-full'>
           <GradientTitle text='Features' />
@@ -148,6 +203,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+
 
         {/* developer sample showcase  */}
         {/* <section className='flex flex-col justify-center items-center my-16 h-fit w-full '>
@@ -165,6 +222,14 @@ const Home = () => {
           </div>
         </section> */}
 
+
+        {/* our client logos sliders */}
+        <section className='flex flex-col justify-center items-center h-fit mt-20'>
+          <GradientTitle text='CURATED WORK' />
+          <Title title='Our Client' className='my-6' />
+          <Subtitle subtitle={`Success stories from those who’ve trusted us with their brand and website.`} />
+          <CustomerReviews />
+        </section>
 
         {/* SEO sample showcase  */}
         <section className='flex flex-col justify-center items-center my-16 h-fit w-full '>

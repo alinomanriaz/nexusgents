@@ -34,7 +34,7 @@ const Header = () => {
             <div className='mr-8 backdrop-blur-lg'>
               <Link href="/" className='flex items-center font-medium text-lg md:text-xl'><Image className="w-8 h-10 m-2" src={logo} alt="logo" ></Image>NexusGen</Link>
             </div>
-            <div className={`${isActive ? '' : '-translate-y-full'} absolute  bg-slate-300 dark:bg-darkmodebtncolor md:bg-transparent w-full -top-0 left-0 rounded-b-2xl flex justify-center md:justify-normal transition ease-out duration-200 -z-50 md:z-0 md:translate-y-0 md:w-fit md:relative shadow-md md:shadow-none`}>
+            <div className={`${isActive ? '' : '-translate-y-full'} absolute bg-slate-300 dark:bg-darkmodebtncolor md:bg-transparent w-full -top-0 left-0 rounded-b-2xl flex justify-center md:justify-normal transition ease-out duration-200 -z-50 md:z-0 md:translate-y-0 md:w-fit md:relative shadow-md md:shadow-none`}>
               <div className=' w-96 md:flex md:w-fit'>
                 <nav className='mt-20 mb-10 flex flex-col space-y-1 md:space-y-0 justify-center md:m-0 md:flex-row md:justify-normal md:text-center md:my-0 md:gap-2 md:text-sm'>
 
