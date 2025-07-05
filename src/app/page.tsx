@@ -125,7 +125,7 @@ const Home = () => {
 
 
         {/* Our features promises */}
-        <section className='flex flex-col justify-center items-center my-16 h-fit w-full'>
+        <section className='flex flex-col justify-center items-center mt-40 h-fit w-full'>
           <GradientTitle text='Features' />
           <Title title='Discover our powerful features' className='my-4' />
           <Subtitle subtitle={`Astra offers a range of features to help you build a stunning website in no time`} />
