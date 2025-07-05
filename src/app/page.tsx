@@ -28,9 +28,9 @@ const Home = () => {
   const promisesData = [
     {
       icon: Globe,
-      title: "Web Development",
+      title: "Full-Stack Solutions",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
+        "Custom websites that are fast, responsive, and built to grow your business with modern design and clean code.",
       features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
     },
     {
@@ -41,20 +41,20 @@ const Home = () => {
     },
     {
       icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
+      title: "SEO",
+      description: "Boost your website’s visibility on Google with proven strategies that drive traffic, leads, and real results.",
       features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
     },
     {
       icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
+      title: "Graphic Design",
+      description: "Eye-catching designs for logos, ads, and branding that make your business stand out across all platforms.",
       features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
+      title: "Video Editing",
+      description: "Professional video editing that engages, tells your story, and keeps your audience hooked from start to finish.",
       features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
     },
     {
@@ -193,7 +193,7 @@ const Home = () => {
         {/* Our features promises */}
         <section className='flex flex-col justify-center items-center my-16 h-fit w-full'>
           <GradientTitle text='Features' />
-          <Title title='Discover our powerful features' className='my-8' />
+          <Title title='Discover our powerful features' className='my-4' />
           <Subtitle subtitle={`Astra offers a range of features to help you build a stunning website in no time`} />
           <div className='w-11/12 flex flex-col md:flex-row justify-between items-center mt-20'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
