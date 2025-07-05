@@ -87,8 +87,8 @@ const Home = () => {
     <>
       <main className='h-full w-full'>
         {/* hero section */}
-        <section className='hero-section flex flex-col items-center justify-center h-fit'>
-          <div className='mt-28 flex justify-center items-center text-center flex-col overflow-hidden w-full sm:px-10'>
+        <section className=' hero-section flex flex-col items-center justify-center h-[calc(100dvh-50px)]'>
+          <div className=' flex justify-center items-center text-center flex-col overflow-hidden w-full sm:px-10'>
             <div className='absolute dark:hidden -top-28 rounded-full blur-[90px] w-full h-24 bg-gradient'></div>
             <div className="sm:-mt-2 mt-0 absolute opacity-10 md:opacity-10 inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[size:3rem_3rem] dark:sm:bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 sm:h-[150vh] h-[80vh]" />
             {theme === "dark" ? <div className='box-wrapper w-52 h-8 flex justify-center items-center bg-white/20 rounded-2xl'>
@@ -103,75 +103,9 @@ const Home = () => {
             <div className='flex sm:flex-row justify-center flex-col items-center dark:bg-white/20 bg-darkmodebtncolor/15 my-12 gap-4 p-2 rounded-lg sm:rounded-full border-t border-black/10 dark:border-white/40'><div className='px-2'><span className='sm:pl-2 -ml-2  text-xl'>✨</span><span>Start building your dream business</span></div><Button className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
           </div>
         </section>
-        {/* hero section ended */}
-        {/* hero banner horizental slider */}
-        {/* <Herobannerslider /> */}
-        {/* End  hero banner horizental slider */}
 
 
-
-
-
-
-        {/* our virtical slider */}
-        <section className='flex flex-col justify-center items-center h-fit mt-20'>
-          {/* <Slidervirtical /> */}
-        </section>
-
-        {/* other options */}
-        {/* <section className='w-full h-fit'>
-          <div className='w-full flex justify-center items-center h-fit my-20'>
-            <div className='w-11/12 flex justify-center items-center flex-col md:flex-row '>
-              <div className='md:w-1/2 flex flex-col justify-center '>
-                <h1 className='w-full dark:text-white tracking-tight text-slate-900 font-extrabold md:text-4xl text-3xl '>heading</h1>
-                <p className=' text-gray-600 text-md pb-8 pt-4 text-center md:text-start'>subtitle</p>
-              </div>
-              <div className='md:w-1/2 grid sm:grid-cols-2 md:grid-rows-2 gap-8 grid-cols-1'>
-                <div className='sm:max-w-[300px] rounded-xl bg-slate-700/15 shadow-xl ring-1 ring-slate-200/10 p-4'>
-                  <h1 className='text-2xl font-semibold' >heading</h1>
-                  <p className='text-md text-gray-600/90 dark:text-gray-500 py-2 leading-6 tracking-wide'>jdkalkd akjsd aljsdkja daks dkajs ldasj dk jlasd las kjdg ajsdgl aslgd askjd galjskgd lasdkjg ajks dgl</p>
-                </div>
-                <div className='sm:max-w-[300px] rounded-xl bg-slate-700/15 shadow-xl ring-1 ring-slate-200/10 p-4'>
-                  <h1 className='text-2xl font-semibold' >heading</h1>
-                  <p className='text-md text-gray-600/90 dark:text-gray-500 py-2 leading-6 tracking-wide'>jdkalkd akjsd aljsdkja daks dkajs ldasj dk jlasd las kjdg ajsdgl aslgd askjd galjskgd lasdkjg ajks dgl</p>
-                </div>
-                <div className='sm:max-w-[300px] rounded-xl bg-slate-700/15 shadow-xl ring-1 ring-slate-200/10 p-4'>
-                  <h1 className='text-2xl font-semibold' >heading</h1>
-                  <p className='text-md text-gray-600/90 dark:text-gray-500 py-2 leading-6 tracking-wide'>jdkalkd akjsd aljsdkja daks dkajs ldasj dk jlasd las kjdg ajsdgl aslgd askjd galjskgd lasdkjg ajks dgl</p>
-                </div>
-                <div className='sm:max-w-[300px] rounded-xl bg-slate-700/15 shadow-xl ring-1 ring-slate-200/10 p-4'>
-                  <h1 className='text-2xl font-semibold' >heading</h1>
-                  <p className='text-md text-gray-600/90 dark:text-gray-500 py-2 leading-6 tracking-wide'>jdkalkd akjsd aljsdkja daks dkajs ldasj dk jlasd las kjdg ajsdgl aslgd askjd galjskgd lasdkjg ajks dgl</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* <section className='flex flex-col justify-center items-center my-16 h-fit w-full'>
-          <div className='w-11/12 bg-red-500 flex flex-col md:flex-row justify-between items-center mt-20'>
-            
-            <div className='w-full bg-yellow-400 rounded-3xl space-y-6'>
-              <div className='font-extrabold text-4xl'>We are a Result Driven Tech Company</div>
-              <div>
-                <Button className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-md sm:rounded-md'} btname={'Get started'} />
-                <Button className={' w-full sm:w-auto text-black rounded-md sm:rounded-md'} btname={'Get started'} />
-                
-              </div>
-            </div>
-            <div className='w-full bg-yellow-400 rounded-3xl'>
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nisi consequatur tempore maiores? Numquam nostrum ea nihil, quam dicta repellat asperiores fuga tempora assumenda soluta recusandae temporibus minima facilis eaque.</div>
-              <div className='py-2'>
-                <div>
-                  <div className='font-bold text-4xl'>200+</div>
-                  <div className='text-sm'>Successfull Project</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        <section className='flex flex-col justify-center items-center h-fit w-full'>
+        <section className='flex flex-col justify-center items-center h-fit w-full bg-purple-200'>
           <div className='w-11/12  flex flex-col md:flex-row justify-evenly items-center'>
 
             {
