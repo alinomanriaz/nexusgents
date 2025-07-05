@@ -105,7 +105,7 @@ const Home = () => {
         </section>
 
 
-        <section className='flex flex-col justify-center items-center h-fit w-full bg-purple-200'>
+        <section className='flex flex-col justify-center items-center h-fit w-full'>
           <div className='w-11/12  flex flex-col md:flex-row justify-evenly items-center'>
 
             {
