@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='w-full space-y-16'>
+    <div className='w-full space-y-16 mb-20'>
     <HeroSection />
     <SeoServices />
     <BusinessGoal />
