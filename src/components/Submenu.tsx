@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BiCodeAlt, BiMobile, BiBrush, BiRocket } from 'react-icons/bi'
+import { FcBullish } from "react-icons/fc";
 
 const services = [
   {
@@ -28,6 +29,12 @@ const services = [
     icon: <BiRocket className="text-2xl text-purple-600" />,
     desc: 'Boost visibility and traffic with modern SEO strategies.',
     href: '/services/seo-marketing'
+  },
+  {
+    title: 'Marketing',
+    icon: <FcBullish className="text-2xl text-purple-600" />,
+    desc: 'Boost visibility and traffic with modern Marketing strategies.',
+    href: '/services/marketing'
   }
 ]
 
