@@ -124,7 +124,7 @@ td,tr,th{
     @apply absolute w-[150%] h-[850%] left-[-25%] top-[-360%] content-[""] animate-border-spin;
   }
   .card-style {
-    @apply hover:shadow-md rounded-xl ring-1 ring-gray-400/30 dark:ring-blue-300/5 dark:shadow-xl;
+    @apply hover:shadow-md rounded-xl ring-1 bg-white dark:bg-transparent ring-gray-400/30 dark:ring-blue-300/5 dark:shadow-xl;
   }
 }
 .loader {

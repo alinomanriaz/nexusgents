@@ -22,6 +22,7 @@ import Four from '@/components/home/Four'
 import FeaturePromises from '@/components/home/FeaturePromises'
 import ClientClount from '@/components/home/ClientClount'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
+import Questions from '@/components/home/Questions'
 
 // import Button from '@/components/Button'
 
@@ -55,6 +56,7 @@ const Home = () => {
         <FeaturePromises />
         <Four />
         <WhyChooseUs />
+        <Questions />
         <Subscription />
         </div>
         

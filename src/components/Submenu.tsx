@@ -56,7 +56,7 @@ const Submenu: React.FC<SubmenuServicesProps> = ({ close }) => {
         onMouseLeave={close}
         className="bg-white dark:bg-transparent backdrop-blur-2xl w-[90%] h-fit max-w-6xl rounded-lg shadow-xl ring-1 ring-gray-200 dark:ring-gray-700 p-6 "
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
+        <div onClick={close} className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
           {services.map((item, idx) => (
             <Link
               key={idx}
