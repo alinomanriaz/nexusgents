@@ -13,16 +13,17 @@ const HeroSection = () => {
 
         <div className=' w-full h-full'>
           <div className='leading-tight md:my-8 my-6  md:text-[90px] w-80 md:w-[55%] md:leading-tight dark:text-slate-300 z-10 tracking-tight text-slate-900 font-semibold text-3xl '>
-            <div>Domination</div>
+            {/* <div>Domination</div>
             <div className='flex justify-start items-center'>
               <div>Search</div>
               <div className='ring-1 ml-12 flex justify-start items-center bg-transparent backdrop-blur-3xl ring-blue-800 rounded-4xl text-[30px] px-4 py-3 w-full'>
                 <Search className='text-blue-800 size-10 mr-4' /><div>asdadaasdasdad</div></div>
             </div>
-            <div>Algorithms</div>
+            <div>Algorithms</div> */}
+            <div>We Don’t Just Rank You Higher—We Grow Your Revenue with SEO.</div>
           </div>
           <div className='text-md text-gray-600 dark:text-gray-500 w-72 md:w-3/5 leading-6 tracking-wide'>
-            At Nexusgen, we help brands grow faster with high-converting websites, powerful SEO strategies, and full-stack web development tailored to your goals.
+            We Don’t Just Rank You Higher—We Grow Your Revenue with SEO.
           </div>
           <Button className={'bg-darkmodebtncolor my-9 w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
       </div>

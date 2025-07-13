@@ -24,9 +24,9 @@ const ThemeToggle = () => {
       className="cursor-pointer border border-neutral-700/80 rounded-full p-1 ml-auto mr-4"
     >
       {theme === 'dark' ? (
-        <FaMoon className="size-5 p-1" />
-      ) : (
         <IoSunnyOutline className="size-5" />
+      ) : (
+        <FaMoon className="size-5 p-1" />
       )}
     </div>
   );
