@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button'
+import { TiArrowRight } from "react-icons/ti";
 // import { Search } from 'lucide-react'
 
 
@@ -25,7 +26,12 @@ const HeroSection = () => {
           <div className='text-md text-gray-600 dark:text-gray-500 w-72 md:w-3/5 leading-6 tracking-wide'>
             Unlock real growth with NexusGen&apos;s data-driven SEO strategies designed for long-term results, better traffic, and higher conversions.
           </div>
-          <Button className={'bg-darkmodebtncolor my-9 w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
+          <Button
+            className={'bg-darkmodebtncolor my-9 w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'}
+            btname={'Get a Free SEO Audit'}
+            iicon={<TiArrowRight className='size-6 ml-2'/>}
+          />
+        </div>
       </div>
     </section>
   )

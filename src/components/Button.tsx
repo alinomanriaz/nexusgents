@@ -18,11 +18,11 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onSubmitHandler}
-      className={`${className} active:scale-x-[0.98] transition-all ease-in-out duration-400 py-[8px] px-6`}
+      className={`flex justify-center items-center ${className} active:scale-x-[0.98] transition-all ease-in-out duration-400 py-[8px] px-6`}
     >
       {loader ? 'loading...' : <>
-        {btname}
-        {iicon}
+        <div>{btname}</div>
+        <div>{iicon}</div>
       </>}
     </button>
   );
