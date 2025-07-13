@@ -5,6 +5,11 @@ const SeoServices = () => {
     const services= [
         {
             icon: Globe,
+            title: 'Keyword Research & Strategy',
+            subtitle: 'Target the right audience at the right time.'
+        },
+        {
+            icon: Globe,
             title: 'On-Page SEO',
             subtitle: 'From meta tags to structured data—we optimize every page element.'
         },
@@ -42,7 +47,7 @@ const SeoServices = () => {
                 <div className='grid grid-cols-3  w-full h-full gap-6 my-10 '>
                     {
                         services.map((data, index) => (
-                            <div key={index} className='card-style ring-1 row-span-2 ring-gray-500 rounded-2xl p-3 flex flex-col items-start space-y-4'>
+                            <div key={index} className='card-style ring-1 row-span-2 ring-gray-500 rounded-2xl p-6 flex flex-col items-start space-y-4'>
                                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-600/10 rounded-lg flex items-center justify-center mb-4">
                                     <Globe className="h-6 w-6 text-blue-600" />
                                 </div>
