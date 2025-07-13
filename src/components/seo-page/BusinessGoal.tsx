@@ -10,7 +10,7 @@ const content = [
     },
     {
         heading: 'Packaging industry Canada',
-        text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
+        text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
         image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
     },
     {
