@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="sm:-mt-2 mt-0 absolute opacity-10 md:opacity-10 inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[size:3rem_3rem] dark:sm:bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 sm:h-[150vh] h-[80vh]" />
 
         <div className=' w-full h-full'>
-          <div className='leading-tight md:my-8 my-6  md:text-[60px] w-80 md:w-[55%] md:leading-tight dark:text-slate-300 z-10 tracking-tight text-slate-900 font-semibold text-3xl '>
+          <div className='leading-tight md:my-8 my-6  md:text-[60px] w-80 md:w-[55%] md:leading-tight dark:text-slate-300 z-10 tracking-tight text-slate-900 font-extrabold text-3xl '>
             {/* <div>Domination</div>
             <div className='flex justify-start items-center'>
               <div>Search</div>
@@ -23,7 +23,7 @@ const HeroSection = () => {
             <div>We Don’t Just Rank You Higher—We Grow Your Revenue with SEO.</div>
           </div>
           <div className='text-md text-gray-600 dark:text-gray-500 w-72 md:w-3/5 leading-6 tracking-wide'>
-            We Don’t Just Rank You Higher—We Grow Your Revenue with SEO.
+            Unlock real growth with NexusGen&apos;s data-driven SEO strategies designed for long-term results, better traffic, and higher conversions.
           </div>
           <Button className={'bg-darkmodebtncolor my-9 w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
       </div>
