@@ -10,13 +10,49 @@ const services = [
     title: 'Web Development',
     icon: <BiCodeAlt className="text-2xl text-blue-600" />,
     desc: 'Custom websites, eCommerce & CMS solutions.',
-    href: '/services/web-development'
+    href: '/services/web-development',
+    menu: [
+      {
+        submenu: 'E-Commerce web design',
+        href: '/services/web-development/e-commerce'
+      },
+      {
+        submenu: 'Custom web developement ',
+        href: '/services/web-development/custom-development'
+      },
+      {
+        submenu: 'Wordpress web developement',
+        href: '/services/web-development/wordpress-development'
+      },
+      {
+        submenu: 'Shopify web developement',
+        href: '/services/web-development/shopify-development'
+      },
+      {
+        submenu: 'Software developement',
+        href: '/services/web-development/software-development'
+      },
+    ]
   },
   {
     title: 'Mobile Apps',
     icon: <BiMobile className="text-2xl text-green-600" />,
     desc: 'iOS and Android development with native and hybrid frameworks.',
-    href: '/services/mobile-apps'
+    href: '/services/mobile-apps',
+    menu: [
+      {
+        submenu: 'Android app developement ',
+        href: '/services/web-development/android-development'
+      },
+      {
+        submenu: 'iOS app developement',
+        href: '/services/web-development/ios-development'
+      },
+      {
+        submenu: 'React-Native developement',
+        href: '/services/web-development/react-native-development'
+      }
+    ]
   },
   {
     title: 'UI/UX Design',
@@ -28,7 +64,7 @@ const services = [
     title: 'SEO & Marketing',
     icon: <BiRocket className="text-2xl text-purple-600" />,
     desc: 'Boost visibility and traffic with modern SEO strategies.',
-    href: '/services/seo-marketing'
+    href: '/services/seo'
   },
   {
     title: 'Marketing',
@@ -58,19 +94,23 @@ const Submenu: React.FC<SubmenuServicesProps> = ({ close }) => {
       >
         <div onClick={close} className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
           {services.map((item, idx) => (
-            <Link
+            <div
               key={idx}
-              href={item.href}
-              className="group p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-transparent dark:hover:ring-gray-600/20 dark:hover:ring-1 transition"
+              
+              className="group flex flex-col p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-transparent dark:hover:ring-gray-600/20 dark:hover:ring-1 transition"
             >
               <div className="mb-2">{item.icon}</div>
-              <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600">
+              <Link href={item.href} className="font-bold text-xl mb-3 text-gray-900 dark:text-white group-hover:text-blue-600">
                 {item.title}
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {item.desc}
-              </p>
-            </Link>
+              </Link>
+              {
+                item.menu?.map((data,index)=>(
+                  <Link href={`${data.href}`} key={index} className="hover:border-l-3 border-blue-500 hover:pl-3 w-full text-sm text-gray-800 dark:text-gray-400 my-0.5 transition-all ease-in-out duration-100 pl-1">
+                    {data.submenu}
+                  </Link>
+                ))
+              }
+            </div>
           ))}
         </div>
       </motion.div>

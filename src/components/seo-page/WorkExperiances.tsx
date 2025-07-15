@@ -25,7 +25,7 @@ const content = [
     },
 ]
 
-const BusinessGoal = () => {
+const WorkExperiances = () => {
     const [select, setSelect] = useState<number>(0)
     return (
         <section className='flex flex-col justify-center items-center w-full '>
@@ -74,4 +74,4 @@ const BusinessGoal = () => {
     )
 }
 
-export default BusinessGoal
+export default WorkExperiances
