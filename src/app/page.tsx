@@ -3,27 +3,16 @@ import Image from 'next/image'
 import React from 'react'
 import spark from '../../public/assets/images/sparkles-dark.svg'
 import { IoIosArrowForward } from "react-icons/io"
-// import dashboard from '/public/assets/images/dashboard.svg'
-// import featureImage from '../../public/assets/images/feature.svg'
-// import { Brandslider, Brandslidermobile } from '@/components/brandslider'
-// import Subscription from '@/components/subscription'
-// import { Title, Subtitle, GradientTitle } from '@/components/titles'
-// import Experiencecard from '@/components/Experiencecard'
-// import pic from '../../public/assets/images/pic2.png'
-// import CustomerReviews from '@/components/CustomerReviews'
 import Subscription from '@/components/Subscription'
-// import Herobannerslider from '@/components/Herobannerslider'
-// import Slidervirtical from '@/components/Slidervirtical'
 import Footer from '@/components/Footer'
-
 import Button from '@/components/Button'
 import { useAppSelector } from '@/redux/hooks'
 import Four from '@/components/home/Four'
-import FeaturePromises from '@/components/home/FeaturePromises'
 import ClientClount from '@/components/home/ClientClount'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
 import Questions from '@/components/home/Questions'
 import ImageSideDetail from '@/components/home/ImageSideDetail'
+import OurServices from '@/components/home/OurServices'
 
 // import Button from '@/components/Button'
 
@@ -54,7 +43,7 @@ const Home = () => {
 
         <div className='w-full space-y-34'>
           <ClientClount />
-        <FeaturePromises />
+        <OurServices />
         <Four />
         <ImageSideDetail />
         <WhyChooseUs />
