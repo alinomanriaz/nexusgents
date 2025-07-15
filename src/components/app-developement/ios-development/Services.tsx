@@ -1,5 +1,5 @@
 import React from 'react'
-import Featurepromises from '../Featurepromises'
+
 import {
     Code,
     Database,
@@ -9,6 +9,7 @@ import {
     Zap,
     LucideIcon
 } from "lucide-react"
+import Featurepromises from '@/components/Featurepromises'
 
 type PromiseFeature = {
     icon: LucideIcon
