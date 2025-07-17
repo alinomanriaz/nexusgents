@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 // import { Title } from './titles'
 import axios from 'axios'
-import Button from './Button'
+import {FormSubmitButton} from './Button'
 import Inputbox from './InputBox'
 
 const Subscription = () => {
@@ -50,7 +50,7 @@ const Subscription = () => {
                             type='email'
                             className='w-full bg-white/5 text-white/50'
                             placeholder='Enter your email' />
-                        <Button
+                        <FormSubmitButton
                             onSubmitHandler={onsubmit}
                             loader={loader}
                             btname='Notify Me'

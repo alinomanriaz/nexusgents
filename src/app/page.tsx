@@ -5,16 +5,69 @@ import spark from '../../public/assets/images/sparkles-dark.svg'
 import { IoIosArrowForward } from "react-icons/io"
 import Subscription from '@/components/Subscription'
 import Footer from '@/components/Footer'
-import Button from '@/components/Button'
+import { FormSubmitButton } from '@/components/Button'
 import { useAppSelector } from '@/redux/hooks'
-import Four from '@/components/home/Four'
-import ClientClount from '@/components/home/ClientClount'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
 import Questions from '@/components/home/Questions'
 import ImageSideDetail from '@/components/home/ImageSideDetail'
-import OurServices from '@/components/home/OurServices'
+import BusinessPlanning from '@/components/home/BusinessPlanning'
+import Services from '@/components/common-components/Services'
+import {
+  Code,
+  Database,
+  Globe,
+  Smartphone,
+  Users,
+  Zap
+} from "lucide-react"
+import SeoAnalytics from '@/components/digital-marketing/SeoAnalytics'
+import ClientCount from '@/components/home/ClientCount'
 
-// import Button from '@/components/Button'
+const servicesContent = {
+  titles: {
+    title: 'Our SEO Services Include',
+    subtitle: 'Target the right audience at the right time.'
+  },
+  services: [
+    {
+      icon: Globe,
+      title: "Web Development",
+      description:
+        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
+      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
+      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+    },
+    {
+      icon: Database,
+      title: "Backend Development",
+      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
+      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+    },
+    {
+      icon: Code,
+      title: "Full-Stack Solutions",
+      description: "End-to-end development from frontend to backend with seamless integration",
+      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+    },
+    {
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Speed up your existing applications and improve user experience",
+      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+    },
+    {
+      icon: Users,
+      title: "Consulting & Strategy",
+      description: "Technical consulting and strategic planning for your digital transformation",
+      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+    },
+  ]
+}
 
 const Home = () => {
   const theme = useAppSelector(state => state.theme.mode)
@@ -37,15 +90,18 @@ const Home = () => {
             <div className='text-md text-gray-600 dark:text-gray-500 w-72 md:w-3/5 leading-6 tracking-wide'>
               At Nexusgen, we help brands grow faster with high-converting websites, powerful SEO strategies, and full-stack web development tailored to your goals.
             </div>
-            <div className='flex sm:flex-row justify-center flex-col items-center dark:bg-white/20 bg-darkmodebtncolor/15 my-12 gap-4 p-2 rounded-lg sm:rounded-full border-t border-black/10 dark:border-white/40'><div className='px-2'><span className='sm:pl-2 -ml-2  text-xl'>✨</span><span>Start building your dream business</span></div><Button className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
+            <div className='flex sm:flex-row justify-center flex-col items-center dark:bg-white/20 bg-darkmodebtncolor/15 my-12 gap-4 p-2 rounded-lg sm:rounded-full border-t border-black/10 dark:border-white/40'><div className='px-2'><span className='sm:pl-2 -ml-2  text-xl'>✨</span><span>Start building your dream business</span></div><FormSubmitButton className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'Get started'} /></div>
           </div>
         </section>
 
-        <div className='w-full space-y-34'>
-          <ClientClount />
-        <OurServices />
-        <Four />
+        <div className='w-full space-y-20'>
+          <ClientCount />
+        <Services 
+        content={servicesContent}
+        />
+        <SeoAnalytics />
         <ImageSideDetail />
+        <BusinessPlanning />
         <WhyChooseUs />
         <Questions />
         <Subscription />

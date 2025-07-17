@@ -11,7 +11,7 @@ import axios from "axios";
 import { Clock, Globe, Mail, Phone } from "lucide-react";
 import Inputbox from "@/components/InputBox";
 import Pagenamecontainer from "@/components/Pagenamecontainer";
-import Button from "@/components/Button";
+import {FormSubmitButton} from "@/components/Button";
 
 const Page = () => {
   const [loader, setLoader] = useState(false);
@@ -144,7 +144,7 @@ const onsubmit = async () => {
                 id=""
                 className={`w-full h-48 border dark:border-neutral-400/20 rounded-lg dark:text-white/50 py-2 px-3 dark:placeholder:text-white/30 focus:ring-1 focus:ring-inset dark:focus:ring-white/10 outline-none focus-visible:border-neutral-500/50 border-gray-800/30 placeholder:text-gray-400 text-black/50 focus:ring-blue-600 dark:bg-white/5`}
               ></textarea>
-              <Button
+              <FormSubmitButton
                 onSubmitHandler={onsubmit}
                 loader={loader}
                 className={

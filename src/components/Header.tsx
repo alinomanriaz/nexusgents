@@ -9,11 +9,8 @@ import { IoClose } from "react-icons/io5";
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import ThemeToggle from './ThemeToggle'
-// import LogoutButton from './LogoutButton'
-// import Button from './Button'
 import Submenu from './Submenu'
-import Button from './Button'
-// import LogoutButton from './LogoutButton'
+import { FormSubmitButton } from './Button'
 
 
 
@@ -24,7 +21,7 @@ const Header = () => {
   const [subMenu, setSubMenu] = useState(false);
   // const [loading, setLoading] = useState(true)
 
-  console.log({isActive:isActive})
+  console.log({ isActive: isActive })
 
   return (
     <>
@@ -44,6 +41,7 @@ const Header = () => {
                     <div onMouseEnter={() => setSubMenu(true)} className={`${path.startsWith('/services') ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} >Services<GoChevronDown /></div>
                   </div>
 
+                  <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/client" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 text-nowrap px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/about">Our Client</Link>
                   <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/about" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/about">About</Link>
                   <Link onClick={() => { setIsactive(!isActive) }} onMouseEnter={() => setSubMenu(false)} className={`${path === "/contact" ? "bg-blue-900/20" : ""} navlink flex flex-row items-center w-full py-3 px-8 rounded-md duration-200 hover:bg-blue-900/20`} href="/contact">Contact</Link>
                 </nav>
@@ -58,7 +56,7 @@ const Header = () => {
             {(!cuser) ? */}
             <div className='hidden md:flex justify-center items-center space-x-4 text-sm'>
 
-              <Link href={'/contact'}><Button className={'bg-[#0f172a] active:scale-105 text-white dark:bg-gradient hidden md:flex rounded-md'} btname={'Get Started'} /></Link>
+              <Link href={'/contact'}><FormSubmitButton className={'bg-[#0f172a] active:scale-105 text-white dark:bg-gradient hidden md:flex rounded-md'} btname={'Get Started'} /></Link>
             </div>
             {/* : <LogoutButton /> */}
 
@@ -71,12 +69,12 @@ const Header = () => {
           </div>
 
         </div>
-        
+
 
       </header>
       {
-          subMenu && <Submenu close={() => setSubMenu(false)} />
-        }
+        subMenu && <Submenu close={() => setSubMenu(false)} />
+      }
 
     </>
   )

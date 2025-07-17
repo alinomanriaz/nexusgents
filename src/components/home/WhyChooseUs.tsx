@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+import {FormSubmitButton} from '../Button'
 
 import { Code, Database, Globe, Smartphone } from 'lucide-react'
 const WhyChooseUs = () => {
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
                         <div className='font-extrabold text-3xl'>WHY CHOOSE US?</div>
                         <div className=' text-gray-500 w-[70%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis exercitationem voluptatibus error temporibus facere aliquid minus excepturi, voluptate amet vel?</div>
                     </div>
-                    <div><Button className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'started'} /></div>
+                    <div><FormSubmitButton className={'bg-darkmodebtncolor w-full sm:w-auto dark:bg-gradient text-white rounded-lg sm:rounded-full'} btname={'started'} /></div>
                 </div>
                 <div className='flex justify-center items-center gap-4 py-8'>
                     {
@@ -48,9 +48,9 @@ const WhyChooseUs = () => {
                                     <div className={`w-12 h-12 ${index===0? 'bg-blue-600/10 ': 'bg-blue-100 dark:bg-blue-600/10'}   rounded-lg flex items-center justify-center mb-4`}>
                                         <Globe className="h-6 w-6 text-blue-600" />
                                     </div>
-                                    <div className={`text-xl font-semibold ${index===0? 'text-white ': 'text-black dark:text-white'}`}>{d.title}</div>
+                                    <div className={`text-xl font-semibold ${index===0? ' ': 'text-black dark:text-white'}`}>{d.title}</div>
                                     <div className="text-gray-500 dark:text-white/50 text-sm">{d.description}</div>
-                                    <Button className={`${index===0? 'bg-white/10':'bg-darkmodebtncolor'} w-full mt-4 sm:w-auto dark:bg-gradient text-white text-sm rounded-lg sm:rounded-full`} btname={'Get started'}/>
+                                    <FormSubmitButton className={`${index===0? 'bg-darkmodebtncolor':'bg-darkmodebtncolor'} w-full mt-4 sm:w-auto dark:bg-gradient text-white text-sm rounded-lg sm:rounded-full`} btname={'Get started'}/>
                                 </div>
                         ))
                     }

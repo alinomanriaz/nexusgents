@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
-interface ButtonProps {
+interface FormSubmitButtonProps {
   btname: string;
   className?: string;
   iicon?: ReactNode;
@@ -8,7 +9,13 @@ interface ButtonProps {
   loader?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+interface LinkButtonProps {
+  name: string;
+  link: string;
+  className?: string
+}
+
+export const FormSubmitButton: React.FC<FormSubmitButtonProps> = ({
   btname,
   className = '',
   iicon,
@@ -28,4 +35,14 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export const LinkButton: React.FC<LinkButtonProps> = ({ name, link, className }) => {
+  return (
+    <div className='my-8'>
+      <Link
+        className={`flex justify-center items-center ${className} active:scale-x-[0.98] transition-all ease-in-out duration-400 py-[8px] px-6`}
+        href={link}>
+        {name}
+      </Link>
+    </div>
+  )
+}
