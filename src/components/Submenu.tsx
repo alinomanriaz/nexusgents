@@ -90,35 +90,35 @@ const services = [
     menu: [
       {
         submenu: 'Creative Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/creative-designing'
       },
       {
         submenu: 'Banner Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/banner-design'
       },
       {
         submenu: 'Logo Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/logo-design'
       },
       {
         submenu: 'Mockup Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/mockup-design'
       },
       {
         submenu: 'Booklet Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/booklet-design'
       },
       {
         submenu: 'Business Card Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/business-card-design'
       },
       {
         submenu: 'Product Packaging Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/product-packaging-design'
       },
       {
         submenu: 'UI-UX Designing',
-        href: '/services/creative-design'
+        href: '/services/graphic-designs/ui-ux-design'
       },
 
     ]
@@ -181,7 +181,7 @@ const services = [
       },
       {
         submenu: 'Printing Packaging',
-        href: '/services/otherprinting-packaging'
+        href: '/services/other/printing-packaging'
       },
       {
         submenu: 'Professional CV Development',
