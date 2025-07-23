@@ -3,19 +3,19 @@ import React from 'react'
 const ClientCount = () => {
     const satisfycustomer = [
     {
-      mainheading: '5.0',
-      subheading: 'GOOGLE REVIEW',
-      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+      mainheading: '500+',
+      subheading: 'Projects Delivered',
+      text: 'We’ve successfully completed hundreds of client projects globally.'
     },
     {
-      mainheading: '450+',
-      subheading: 'SATISFIED CLIENTS',
-      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+      mainheading: '100%',
+      subheading: 'Client Satisfaction',
+      text: 'Client trust is our asset — we never compromise on quality.'
     },
     {
-      mainheading: '1200+',
-      subheading: 'COMPLETED PROJECTS',
-      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+      mainheading: '24/7',
+      subheading: 'Support',
+      text: 'Our support team is always ready to help you anytime.'
     }
 
   ]
@@ -30,13 +30,13 @@ const ClientCount = () => {
 
                   <div className='font-extrabold text-[30px]'>{data.mainheading}</div>
                   <div className='font-bold text-sm'>{data.subheading}</div>
-                  <div className='text-sm text-gray-600'>{data.text}</div>
+                  <div className='text-sm text-gray-500'>{data.text}</div>
                 </div>
               ))
             }
             </div>
-            <div className='text-sm text-gray-600 w-[50%]'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi incidunt, quaerat nostrum et quasi maxime.
+            <div className='text-sm text-gray-500 w-[50%]'>
+                We offer a wide range of professional services to help your business grow and succeed online.
             </div>
           </div>
         </section>

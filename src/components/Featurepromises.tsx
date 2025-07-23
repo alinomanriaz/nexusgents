@@ -17,13 +17,13 @@ const Featurepromises: React.FC<FeaturepromisesProps> = ({
   features,
 }) => {
   return (
-    <div className="card-style p-6 space-y-5">
+    <div className="card-style p-6 space-y-5 hover:scale-105 cursor-pointer transition-all duration-500 ease-in-out">
       <div>
         <div className="w-12 h-12 bg-blue-100 dark:bg-blue-600/10 rounded-lg flex items-center justify-center mb-4">
           <Icon className="h-6 w-6 text-blue-600" />
         </div>
-        <div className="text-xl font-semibold">{title}</div>
-        <div className="text-gray-500 dark:text-white/50 text-sm">{description}</div>
+        <div className="text-2xl font-semibold py-0.5">{title}</div>
+        <div className="text-gray-500 dark:text-white/50 text-base">{description}</div>
       </div>
       <div>
         <ul className="space-y-2">

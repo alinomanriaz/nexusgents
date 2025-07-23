@@ -11,7 +11,7 @@ interface Services {
         icon: LucideIcon
         title: string
         description: string
-        features: string[]
+        features?: string[]
     }[]
 }
 

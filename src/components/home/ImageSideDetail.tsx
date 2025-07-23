@@ -1,21 +1,27 @@
+import Image from 'next/image'
 import React from 'react'
 
-const ImageSideDetail = () => {
+interface Props {
+    image: string;
+    heading: string;
+    description: string;
+}
+
+const ImageSideDetail = ({content}:{content: Props}) => {
   return (
     <section className='flex flex-col justify-center items-center w-full '>
           <div className='w-11/12 h-full flex flex-col justify-between items-center '>
               <div className='grid grid-cols-2 gap-2.5 w-full'>
-                  <div className=''>
-
-                  </div>
+                  <Image 
+                  className='w-full'
+                  src={content.image}
+                  alt={content.heading}
+                  width={400}
+                  height={400}
+                  />
                   <div className='space-y-6 p-6'>
-                      <div className='text-5xl font-semibold'>Content Creation and Marketing</div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est id impedit inventore veritatis placeat error eveniet necessitatibus non dolorem.</div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet </div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet </div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet </div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet </div>
-                      <div className='text-md text-gray-500'>Lorem ipsum, dolor sit amet </div>
+                      <div className='text-5xl font-semibold'>{content.heading}</div>
+                      <p>{content.description}</p>
                   </div>
               </div>
           </div>

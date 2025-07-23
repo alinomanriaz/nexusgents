@@ -5,6 +5,7 @@ import { Providers } from "@/redux/providers";
 import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
 import ThemeInitializer from "@/helper/themeInitializer";
+import Topheader from "@/components/Topheader";
 
 // import Footer from "@/components/Footer";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Providers>
         <ThemeInitializer>
           <NextTopLoader color="blue" showSpinner={false} />
+          <Topheader />
           <Header />
           {children}
         </ThemeInitializer>
