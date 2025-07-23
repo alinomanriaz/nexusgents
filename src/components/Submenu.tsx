@@ -198,7 +198,7 @@ interface SubmenuServicesProps {
 const Submenu: React.FC<SubmenuServicesProps> = ({ close }) => {
   return (
     <div
-      className="hidden md:flex fixed inset-0 top-16 justify-center z-20"
+      className="hidden md:flex absolute inset-0 top-16 justify-center z-20"
       
     >
       <motion.div

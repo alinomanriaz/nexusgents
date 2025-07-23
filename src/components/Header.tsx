@@ -26,8 +26,8 @@ const Header = () => {
   return (
     <>
       <header className='sticky top-0 z-50 text-sm bg-white dark:bg-transparent backdrop-blur-md  shadow-md'>
-        
-        <div className='flex w-full items-center justify-between md:flex-row md:px-8 px-2'>
+
+        <div className='flex relative w-full items-center justify-between md:flex-row md:px-8 px-2'>
           <div className='flex justify-center items-center text-center md:py-0.5'>
             <div className='mr-8'>
               <Link href="/" className='flex items-center font-medium text-lg md:text-2xl'><Image className="w-8 h-10 m-2" src={logo} alt="logo" ></Image>NexusGen</Link>
@@ -68,14 +68,15 @@ const Header = () => {
               <CgMenuRight onClick={() => { setIsactive(!isActive) }} className={`${isActive ? 'hidden' : 'flex'} size-6`} />
             </div>
           </div>
-
+          {
+            subMenu && <Submenu close={() => setSubMenu(false)} />
+          }
         </div>
 
 
+
+
       </header>
-      {
-        subMenu && <Submenu close={() => setSubMenu(false)} />
-      }
 
     </>
   )
