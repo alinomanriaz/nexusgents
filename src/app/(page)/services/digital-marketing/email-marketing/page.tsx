@@ -1,127 +1,186 @@
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import SeoAnalytics from '@/components/digital-marketing/SeoAnalytics'
-import React from 'react'
+import HeroSectionMarketing from "@/components/digital-marketing/HeroSectionMarketing";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import SecondSection from '@/components/digital-marketing/SecondSection'
-import CraftingSolution from '@/components/digital-marketing/CraftingSolution'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  FaAsterisk,
+  FaCalendarAlt,
+  FaChartBar,
+  FaChartLine,
+  FaDatabase,
+  FaEnvelope,
+  FaListAlt,
+  FaMousePointer,
+  FaPenFancy,
+  FaShoppingCart,
+  FaSitemap,
+  FaTags,
+} from "react-icons/fa";
 
+const heroSectionContent = {
+  fWord: "EMAIL",
+  Ficon: FaEnvelope,
+  Sicon: FaChartLine,
+  Thicon: FaMousePointer,
+  SWord: "MARKETING",
+  Text: "THAT DRIVES REPEAT BUSINESS",
+  subheading:
+    "Turn subscribers into loyal customers. We build high-converting email strategies that nurture leads, recover abandoned carts, and boost lifetime value—with measurable ROI.",
+  Fbuttons: {
+    link: "/contact",
+    name: "Get a Free Audit",
+  },
+  Sbuttons: {
+    link: "#services",
+    name: "See Campaign Examples",
+  },
+};
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Email Marketing Services",
+    subtitle:
+      "End-to-end email strategies that deliver the right message to the right audience at the perfect time—automated for scale.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: FaListAlt,
+      title: "List Growth Strategy",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "Opt-in form optimization, lead magnet development, and targeted acquisition campaigns to build a quality subscriber base.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: FaSitemap,
+      title: "Automation Workflows",
+      description:
+        "Behavior-triggered sequences for welcome series, cart abandonment, post-purchase nurture, and re-engagement.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: FaPenFancy,
+      title: "Copywriting & Design",
+      description:
+        "Persuasive email copy and mobile-responsive templates that align with your brand and drive action.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: FaTags,
+      title: "Segmentation & Personalization",
+      description:
+        "Dynamic content tailored by purchase history, engagement level, and demographic data for hyper-relevance.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: FaShoppingCart,
+      title: "E-Commerce Email Strategy",
+      description:
+        "Product recommendation algorithms, flash sale campaigns, and loyalty program integrations.",
     },
     {
-      icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      icon: FaCalendarAlt,
+      title: "Seasonal Campaign Planning",
+      description:
+        "Holiday promotions, event-based triggers, and annual revenue-boosting email calendars.",
     },
-  ]
-}
+    {
+      icon: FaAsterisk,
+      title: "A/B Testing & Optimization",
+      description:
+        "Subject line tests, send-time experiments, and CTA placement analysis to maximize open/click rates.",
+    },
+    {
+      icon: FaDatabase,
+      title: "CRM & ESP Migration",
+      description:
+        "Seamless transitions between email service providers with list hygiene and template rebuilding.",
+    },
+    {
+      icon: FaChartBar,
+      title: "Performance Analytics",
+      description:
+        "Monthly reports tracking deliverability, revenue per email, and subscriber lifetime value.",
+    },
+  ],
+};
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Email Campaign Results",
+    subtitle:
+      "Proven strategies that increased revenue, reduced churn, and built lasting customer relationships.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "E-Commerce: 35% Revenue from Email",
+      text: "Automated flows and segmentation drove $1.2M in annual email-attributed sales for a fashion brand.",
+      image:
+        "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80", // Open laptop with email analytics
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "SaaS: 300% More Trial Conversions",
+      text: "Behavioral email series increased paid conversions from free trials by 3X in 90 days.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80", // Dashboard with metrics
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "Abandoned Cart: 22% Recovery Rate",
+      text: "3-step SMS/email combo salvaged $450K in otherwise lost revenue last quarter.",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80", // Phone with notification
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Nonprofit: 50% Higher Donor Retention",
+      text: "Personalized impact stories and donor nurture sequences improved repeat gift frequency.",
+      image:
+        "https://images.unsplash.com/photo-1578574577315-3fb0960f61d0?w=800&q=80", // Hands typing
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 42,
+      text: "Average percentage increase in email revenue for clients within 6 months.",
+    },
+    {
+      number: 5,
+      text: "Revenue generated for every $1 spent on email marketing (industry average).",
+    },
+  ],
+};
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Email Delivers the Highest Marketing ROI",
+    description:
+      "Email generates $42 for every $1 spent—the highest return of any channel. Unlike social media algorithms, you own your subscriber list and control the delivery. Our strategies focus on permission-based nurturing that educates, entertains, and converts. From automated behavioral triggers to segmented broadcast campaigns, we ensure every email drives measurable business value while strengthening customer relationships.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "The Cost of Poor Email Practices",
+    description:
+      "Generic blasts, inconsistent sending, and weak CTAs sabotage results. 21% of emails never reach the inbox due to deliverability issues. We audit your current program to fix list hygiene, spam risks, and engagement gaps—then implement a phased strategy that systematically increases opens, clicks, and conversions. The result? A self-sustaining revenue channel that performs 24/7.",
+  },
+];
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  heading: "Automation That Feels Human",
+  description: `Behavioral emails sent at the perfect moment perform 3X better than generic campaigns. We design workflows that respond to user actions—like browsing specific products or abandoning carts—with timely, relevant messaging. Our AI-powered subject line tools and send-time optimization further boost engagement.`,
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+  heading: "Data-Driven Email Strategy",
+  description: `We track micro-conversions (link clicks, scroll depth) to identify what resonates. Heatmaps and A/B tests refine every element—from preheader text to button color—based on how your audience actually engages. Real-time dashboards show ROI per campaign and subscriber segment.`,
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <SecondSection />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <SeoAnalytics 
-    //   content={workExperienceContent}
-      />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <CraftingSolution />
-      <DetailContent
-      content={detailcontent}
-      />
-
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionMarketing content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

@@ -1,138 +1,202 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
+import HeroSection from "@/components/graphic-designing/HeroSection";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
 import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  Briefcase,
+  Globe,
+  Palette,
+  Smartphone,
+  Users,
+  Zap,
+} from "lucide-react";
 
 const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+  title: "Memorable Business Cards That Make Lasting Impressions",
+  button: {
+    name: "Design My Card",
+    link: "/business-card-design",
+  },
+  description:
+    "Strategic business card designs that communicate your brand identity, enhance professional credibility, and ensure you stand out from the competition.",
+  client: [
+    {
+      count: 1000,
+      des: "Business cards designed for professionals",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      count: 95,
+      des: "Client satisfaction rate with our designs",
+    },
+  ],
+  bannerImage:
+    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Business Card Design Services",
+    subtitle:
+      "Custom card designs that reflect your professional brand identity",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: Briefcase,
+      title: "Standard Business Cards",
+      description:
+        "Classic designs with modern touches for everyday professional use",
+      features: [
+        "Bleed-Edge Design",
+        "Premium Paper Stocks",
+        "Spot Color Options",
+        "Quick Turnaround",
+      ],
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: Zap,
+      title: "Premium Business Cards",
+      description: "Luxury cards with special finishes that make a statement",
+      features: [
+        "Foil Stamping",
+        "Spot UV Coating",
+        "Embossing/Debossing",
+        "Unique Die-Cuts",
+      ],
+    },
+    {
+      icon: Smartphone,
+      title: "Digital Business Cards",
+      description: "Interactive NFC/vCard solutions for the digital age",
+      features: [
+        "NFC Chip Integration",
+        "QR Code Solutions",
+        "vCard Compatibility",
+        "Analytics Tracking",
+      ],
+    },
+    {
+      icon: Users,
+      title: "Corporate Sets",
+      description: "Cohesive designs for entire teams and organizations",
+      features: [
+        "Brand Consistency",
+        "Department Variations",
+        "Bulk Order Discounts",
+        "Templated System",
+      ],
+    },
+    {
+      icon: Palette,
+      title: "Creative Concepts",
+      description: "Innovative designs that break the mold",
+      features: [
+        "Unique Shapes",
+        "Interactive Elements",
+        "Mixed Materials",
+        "Conversation-Starters",
+      ],
+    },
+    {
+      icon: Globe,
+      title: "Multilingual Cards",
+      description: "Designs accommodating multiple languages",
+      features: [
+        "Bilingual Layouts",
+        "Cultural Considerations",
+        "International Standards",
+        "Localized Versions",
+      ],
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Business Card Success Stories",
+    subtitle:
+      "How our designs have helped professionals make better connections",
+  },
+  paraContent: [
+    {
+      heading: "Tech CEO: 300% More Follow-Ups",
+      text: "Innovative card with NFC chip increased post-meeting engagement",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    },
+    {
+      heading: "Law Firm: Enhanced Professional Image",
+      text: "Premium embossed cards elevated firm's prestige perception",
+      image:
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+    },
+    {
+      heading: "Startup: 50% More Investor Recall",
+      text: "Unique die-cut design made company more memorable",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+    },
+    {
+      heading: "Sales Team: 35% More Referrals",
+      text: "Redesigned cards with clear value proposition improved networking results",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 24,
+      text: "Hours average turnaround time for digital proofs",
+    },
+    {
+      number: 14,
+      text: "Specialty finishes available for premium cards",
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "Why Professional Business Card Design Matters",
+    description:
+      "A business card is more than just contact information—it's often your first impression. In a world where brand image matters, a professionally designed card signals credibility and attention to detail. Our design approach blends strategic branding with visual appeal to create cards that capture your essence and leave a mark. Every element—from typography to color—aligns with your identity and industry. We don’t just make it look good; we ensure it communicates your value clearly. Whether minimal or bold, your card becomes a conversation starter. It’s a small format with big potential, and we make every square inch count.",
+  },
+  {
+    title: "The Hidden Costs of Generic Business Cards",
+    description:
+      "Generic business cards might save time, but they often cost you opportunities. Poor layouts, forgettable visuals, and thin materials signal a lack of professionalism. We elevate your presence by designing cards that feel personal, intentional, and premium. Our team ensures perfect balance between form and function—maximizing impact without sacrificing readability. From carefully structured information to premium stock selection, every decision is made with purpose. We fine-tune the visual hierarchy so your name, title, and contact details are immediately clear. With high-end print finishes and pixel-perfect setup, your card won’t just get noticed—it’ll get remembered.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  heading: "Strategic Design Elements",
+  description:
+    "Our business card designs are built on principles of clarity, consistency, and brand alignment. We craft a clear visual hierarchy to guide the viewer’s eye across your contact details, title, and brand mark. On-brand color schemes and readable typography ensure your card remains legible and stylish. Strategic use of white space keeps layouts clean and modern. Optional elements like QR codes or NFC chips can add interactivity and function. Each file is prepared to exact print specifications, ensuring flawless production. The result is a professional card that feels as sharp as your elevator pitch.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Premium Production Options",
+  description:
+    "Your business card should feel as good as it looks. We offer a curated selection of production upgrades to match your brand personality. Choose from elegant linen textures or ultra-thick cardstocks for that tactile impression. Finish options include matte, gloss, soft-touch, and uncoated styles to suit every aesthetic. Add luxury with foil stamping, spot UV, or embossing for a premium touch. Our eco-friendly selections include recycled paper and soy-based inks for brands that prioritize sustainability. For tech-forward professionals, we also provide NFC-enabled cards for contactless sharing. Every card is produced with exacting quality standards.",
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

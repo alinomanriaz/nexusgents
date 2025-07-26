@@ -1,125 +1,189 @@
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import SeoAnalytics from '@/components/digital-marketing/SeoAnalytics'
-import React from 'react'
+import HeroSectionMarketing from "@/components/digital-marketing/HeroSectionMarketing";
+import React from "react";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import SecondSection from '@/components/digital-marketing/SecondSection'
-import DetailContent from '@/components/common-components/DetailContent'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import Services from '@/components/common-components/Services'
+  BarChart,
+  Calendar,
+  ClipboardList,
+  FileText,
+  MessageCircle,
+  Play,
+  Settings,
+  Sliders,
+} from "lucide-react";
+import { LuMousePointerClick } from "react-icons/lu";
+import { SlSocialInstagram } from "react-icons/sl";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import { FaRegCommentDots } from "react-icons/fa";
+
+const heroSectionContent = {
+  fWord: "SOCIAL",
+  Ficon: SlSocialInstagram,
+  Sicon: FaRegCommentDots,
+  Thicon: LuMousePointerClick,
+  SWord: "IMPACT",
+  Text: "THAT DRIVES BRAND GROWTH",
+  subheading:
+    "Amplify your voice and turn scrolls into sales. We design high-performing social media campaigns that increase engagement, build community, and deliver ROI across every major platform.",
+  Fbuttons: {
+    link: "/contact",
+    name: "Get a Free Strategy Call",
+  },
+  Sbuttons: {
+    link: "#services",
+    name: "Explore Services",
+  },
+};
 
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Social Media Services",
+    subtitle:
+      "Helping your brand connect, engage, and grow across leading social platforms through strategic content and creative storytelling.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: ClipboardList,
+      title: "Brand Discovery & Goal Setting",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "We begin by understanding your brand's personality, goals, and audience. This ensures your social media campaigns align with your long-term vision and create meaningful impact.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: BarChart,
+      title: "Competitor & Audience Analysis",
+      description:
+        "We research your competitors and target audience to uncover trends and content gaps. This helps position your brand for stronger engagement and community growth.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: FileText,
+      title: "Content Strategy & Visual Planning",
+      description:
+        "We develop a detailed content calendar that blends creativity with strategy — including post formats, themes, and brand messaging tailored for each platform.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: Settings,
+      title: "Platform Setup & Optimization",
+      description:
+        "From setting up new accounts to optimizing existing profiles, we ensure your social pages are professionally branded and built for conversion.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: Play,
+      title: "Post Scheduling & Publishing",
+      description:
+        "We manage consistent publishing across all your active channels using optimal timing and frequency to boost reach and visibility.",
     },
     {
-      icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      icon: Calendar,
+      title: "Creative Content Creation",
+      description:
+        "Our team designs visually appealing posts, short-form videos, carousels, and stories that resonate with your audience and reinforce your brand identity.",
     },
-  ]
-}
+    {
+      icon: Sliders,
+      title: "Campaign Management",
+      description:
+        "We manage ongoing campaigns — from hashtag strategies to influencer collaborations — and ensure everything runs smoothly and delivers measurable results.",
+    },
+    {
+      icon: MessageCircle,
+      title: "Community Engagement",
+      description:
+        "We respond to messages, comments, and DMs to build a loyal online community. Engaging with your audience fosters trust and encourages brand advocacy.",
+    },
+    {
+      icon: BarChart,
+      title: "Insights & Monthly Reporting",
+      description:
+        "You’ll receive detailed reports highlighting audience growth, engagement metrics, and actionable insights to inform future strategies.",
+    },
+  ],
+};
+
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Campaigns That Go Viral",
+    subtitle:
+      "Explore how our social media strategies helped brands create buzz, build trust, and drive traffic in global markets.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "Instagram Growth in the US",
+      text: "We helped fashion and fitness brands reach over 500K followers through reel campaigns, stories, and strategic influencer partnerships.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "Canadian Brand Awareness",
+      text: "Our team ran paid ad and content strategies for Canadian startups, increasing engagement by 200% in just three months.",
+      image:
+        "https://images.unsplash.com/photo-1568036807850-c5a8dfcd2970?auto=format&fit=crop&w=800&q=80",
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "UAE Influencer Collaborations",
+      text: "In the UAE, we launched targeted influencer campaigns and localized reels to generate brand buzz for lifestyle and tech brands.",
+      image:
+        "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80",
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Global Social Impact",
+      text: "From meme content to product promos, we helped international brands go viral and turn engagement into sales across Instagram, TikTok, and LinkedIn.",
+      image:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 2500,
+      text: "Social media campaigns launched with consistent ROI tracking.",
+    },
+    {
+      number: 500000,
+      text: "Followers gained across platforms through organic and paid growth.",
+    },
+  ],
+};
+
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "The Role of Social Media in Modern Marketing:",
+    description:
+      "Social media has transformed the way brands connect with audiences — making it an essential component of modern marketing. From awareness and engagement to conversions and loyalty, platforms like Instagram, LinkedIn, and TikTok offer direct access to billions of users. Our approach involves creating platform-specific strategies that align with your voice, goals, and target demographic. We combine creative content with algorithm-friendly formats to ensure maximum reach and relevance. With our support, you can build trust, grow your audience, and increase brand visibility — all while staying true to your mission.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "Why Every Brand Needs a Social Media Strategy:",
+    description:
+      "Gone are the days of posting randomly — today, success requires planning, creativity, and analytics. Our social media strategy services help businesses gain clarity, consistency, and performance. We break down platform goals, user intent, and content types to design a roadmap that fits your audience and brand style. Whether you're starting from scratch or scaling up, we’ll craft an approach that gets noticed and delivers. Let your brand thrive in the conversation with curated visuals, engaging captions, and data-backed decisions.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&q=80",
+  heading: "Build an Engaged Online Community",
+  description: `An engaged community can be your biggest brand asset. We help you grow a loyal following across social media platforms by combining timely interaction with authentic storytelling. Our engagement strategies include comment replies, story polls, and interactive posts that invite conversation. By consistently showing up where your audience is, we help you foster brand love and trust. We also monitor sentiment and feedback to refine your messaging and deepen relationships. This approach turns casual followers into vocal brand advocates and repeat customers.`,
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+  heading: "Social Media Insights That Drive Action",
+  description: `Every like, comment, and share tells a story — and we know how to read it. Our team uses advanced social analytics tools to track post performance, audience behavior, and content trends. We translate those metrics into clear, actionable strategies. Whether it's refining your posting time or adjusting visuals for better click-throughs, we act fast to keep momentum going. You’ll get transparent reports with performance KPIs and next-step suggestions tailored to your goals. By combining real-time data with creative instincts, we ensure your campaigns are always moving forward.`,
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <SecondSection />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <SeoAnalytics 
-    //   content={workExperienceContent}
-      />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <DetailContent
-      content={detailcontent}
-      />
-
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionMarketing content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

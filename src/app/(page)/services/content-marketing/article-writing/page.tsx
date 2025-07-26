@@ -1,122 +1,203 @@
-
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import React from 'react'
+// import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
+import React from "react";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
+  FileSearch,
+  PenTool,
+  ShieldCheck,
+  Zap,
+  BarChart,
+  FileText,
+  Layers,
+  BookOpen,
+  TrendingUp,
   Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import CraftingSolution from '@/components/digital-marketing/CraftingSolution'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  CheckCircle,
+  Share2,
+} from "lucide-react";
 
+import Services from "@/components/common-components/Services";
+// import WorkExperiances from '@/components/common-components/WorkExperiances'
+import DetailContent from "@/components/common-components/DetailContent";
+import HeroSectionContentMarketing from "@/components/content-marketing/HeroSectionContentMarketing";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+
+const HeroSectionContent = {
+  fheading: "Premium Content That",
+  sheading: "Engages & Converts",
+  subheading:
+    "Expertly crafted articles that boost your authority, drive organic traffic, and turn readers into customers—written by industry specialists.",
+  list: [
+    {
+      Icon: PenTool,
+      text: "SEO-Optimized Writing",
+    },
+    {
+      Icon: Zap,
+      text: "24-48 Hour Delivery",
+    },
+    {
+      Icon: FileSearch,
+      text: "In-Depth Research",
+    },
+    {
+      Icon: ShieldCheck,
+      text: "Plagiarism-Free",
+    },
+  ],
+  fbutton: {
+    link: "/order",
+    name: "Order Content Now",
+  },
+  sbutton: {
+    link: "/samples",
+    name: "View Samples",
+  },
+};
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Article Writing Services",
+    subtitle:
+      "Comprehensive content solutions designed to boost your search visibility and engage your target audience.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: FileText,
+      title: "SEO Blog Articles",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "Keyword-optimized blog posts that rank well in search engines while providing genuine value to readers.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: Layers,
+      title: "Pillar Page Creation",
+      description:
+        "Comprehensive, in-depth content hubs that establish topical authority and support your SEO strategy.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: BarChart,
+      title: "Commercial Content",
+      description:
+        "High-converting product descriptions, service pages, and landing pages that drive sales.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: BookOpen,
+      title: "Long-Form Articles",
+      description:
+        "Detailed guides and whitepapers (2,000-5,000 words) that demonstrate expertise and generate leads.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Evergreen Content",
+      description:
+        "Timeless, authoritative pieces that continue to drive traffic months and years after publication.",
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      title: "Newsjacking Pieces",
+      description:
+        "Timely articles capitalizing on current trends and breaking news in your industry.",
     },
     {
       icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      title: "Expert Roundups",
+      description:
+        "Curated insights from industry leaders that boost credibility and social shares.",
     },
-  ]
-}
+    {
+      icon: CheckCircle,
+      title: "Content Refreshes",
+      description:
+        "Updating and optimizing older content to maintain rankings and relevance.",
+    },
+    {
+      icon: Share2,
+      title: "Content Distribution",
+      description:
+        "Strategic promotion of your articles through social media and email campaigns.",
+    },
+  ],
+};
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Content That Delivers Results",
+    subtitle:
+      "See how our strategic article writing has helped businesses establish authority and drive measurable growth.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "SaaS Company: 400% Traffic Growth",
+      text: "Comprehensive pillar page strategy increased organic traffic from 5K to 25K/month in 8 months.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "E-Commerce: 75% More Product Sales",
+      text: "Optimized product descriptions and buying guides increased conversion rates by 75%.",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "B2B Service: 120 New Leads/Month",
+      text: "Industry-specific whitepapers and case studies generated consistent high-quality leads.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Healthcare: #1 Rankings",
+      text: "Authoritative medical content ranked for 35+ competitive health-related keywords.",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 1500,
+      text: "Articles published with an average 3X ROI for clients",
+    },
+    {
+      number: 92,
+      text: "Percentage of clients who achieve first-page rankings",
+    },
+  ],
+};
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Professional Article Writing Matters",
+    description:
+      "High-quality articles generate 67% more leads than traditional marketing content. Our research-backed approach combines SEO best practices with engaging storytelling to create content that both ranks well and converts readers. Each piece is crafted by subject matter experts who understand how to present complex information in an accessible way while strategically incorporating keywords and conversion elements. We focus on creating assets that continue to deliver value long after publication through evergreen strategies and regular content refreshes.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "The Cost of Poor Content Quality",
+    description:
+      "Thin, generic content fails to rank and damages brand credibility. Google's Helpful Content Update now penalizes low-value articles, making quality more important than ever. Our rigorous editorial process ensures every piece meets the highest standards for accuracy, depth, and readability. We conduct original research, interview subject matter experts, and analyze competitor content to create pieces that truly stand out. The result? Content that earns backlinks, social shares, and rankings while establishing your brand as an industry authority.",
+  },
+];
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+  heading: "Content That Ranks",
+  description: `Our articles are engineered for search success. We combine comprehensive keyword research with semantic SEO techniques to create content that satisfies both search algorithms and human readers. Each piece follows our proven framework for on-page optimization, including strategic header structures, natural keyword placement, and optimized metadata. We focus on creating "10X content" that outperforms competing articles in both quality and comprehensiveness.`,
+};
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Strategic Content Planning",
+  description: `We don't just write articles - we build content ecosystems. Our approach begins with detailed audience research and competitive analysis to identify the most valuable content opportunities. We then develop a strategic content calendar that aligns with your business goals and buyer's journey. Each piece is designed to work as part of a larger system, with internal linking strategies that boost domain authority and keep readers engaged across your site.`,
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <CraftingSolution />
-      <DetailContent
-      content={detailcontent}
-      />
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionContentMarketing content={HeroSectionContent} />
+      <Services content={servicesContent} />
 
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

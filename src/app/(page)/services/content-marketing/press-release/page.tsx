@@ -1,122 +1,210 @@
-
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import React from 'react'
+// import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
+import React from "react";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
+  Zap,
+  BarChart,
+  FileText,
+  Newspaper,
+  Search,
+  Share2,
+  TrendingUp,
+  DollarSign,
   Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import CraftingSolution from '@/components/digital-marketing/CraftingSolution'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  Award,
+  Globe,
+  MapPin,
+  FactoryIcon,
+} from "lucide-react";
+
+import Services from "@/components/common-components/Services";
+// import WorkExperiances from '@/components/common-components/WorkExperiances'
+import DetailContent from "@/components/common-components/DetailContent";
+import HeroSectionContentMarketing from "@/components/content-marketing/HeroSectionContentMarketing";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+
+const HeroSectionContent = {
+  fheading: "Newsworthy Press Releases That",
+  sheading: "Get Media Attention",
+  subheading:
+    "Professionally crafted press releases that capture journalist interest, boost brand visibility, and drive meaningful coverage across media outlets.",
+  list: [
+    {
+      Icon: Newspaper,
+      text: "AP Style Formatting",
+    },
+    {
+      Icon: Search,
+      text: "SEO-Optimized",
+    },
+    {
+      Icon: Share2,
+      text: "Distribution Network",
+    },
+    {
+      Icon: Zap,
+      text: "24-48 Hour Turnaround",
+    },
+  ],
+  fbutton: {
+    link: "/order-press-release",
+    name: "Get a Press Release",
+  },
+  sbutton: {
+    link: "/samples",
+    name: "View Samples",
+  },
+};
 
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Press Release Services",
+    subtitle:
+      "Comprehensive press release solutions from writing to distribution for maximum media impact.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: FileText,
+      title: "Standard Press Releases",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "Traditional news announcements formatted in AP style for media pickup (400-600 words).",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: TrendingUp,
+      title: "SEO Press Releases",
+      description:
+        "Optimized releases with strategic keywords for both media and search visibility.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-    },
-    {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: DollarSign,
+      title: "Financial Announcements",
+      description:
+        "SEC-compliant releases for earnings reports, IPOs, and corporate developments.",
     },
     {
       icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      title: "Event Announcements",
+      description:
+        "Compelling releases for product launches, grand openings, and special events.",
     },
-  ]
-}
+    {
+      icon: Award,
+      title: "Award Announcements",
+      description:
+        "Professional recognition releases that highlight achievements and milestones.",
+    },
+    {
+      icon: Globe,
+      title: "National Distribution",
+      description:
+        "Distribution to major news outlets, industry publications, and newswires.",
+    },
+    {
+      icon: MapPin,
+      title: "Local Media Targeting",
+      description:
+        "Hyper-local distribution to regional newspapers, TV, and radio stations.",
+    },
+    {
+      icon: FactoryIcon,
+      title: "Trade Media Placement",
+      description:
+        "Targeted distribution to niche industry publications and journalists.",
+    },
+    {
+      icon: BarChart,
+      title: "Media Monitoring",
+      description:
+        "Tracking and reporting on pickup, mentions, and coverage results.",
+    },
+  ],
+};
+
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Press Release Success Stories",
+    subtitle:
+      "How our professionally crafted releases have generated meaningful media coverage for clients.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "Tech Startup: Featured in 15+ Outlets",
+      text: "Product launch release secured coverage in TechCrunch, Wired, and industry blogs.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "Nonprofit: 300% More Donations",
+      text: "Annual report release led to features in local TV and newspaper coverage.",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "Healthcare: National TV Coverage",
+      text: "Medical breakthrough announcement featured on national morning shows.",
+      image:
+        "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&q=80",
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Franchise: 20 Local News Features",
+      text: "Grand opening campaign secured coverage in all target markets.",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 1200,
+      text: "Press releases distributed with 92% media pickup rate",
+    },
+    {
+      number: 500,
+      text: "Journalist relationships in our media network",
+    },
+  ],
+};
+
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Professional Press Releases Matter",
+    description:
+      "Press releases are more than announcements—they’re opportunities to shape perception and earn media trust. Companies that invest in professionally written releases receive 3X more coverage, simply because journalists pay attention to well-structured, newsworthy stories. Our PR experts write in AP style, include strong quotes, and develop timely, engaging angles that hook reporters. Whether it’s a product launch, executive hire, or data-driven insight, we help you tell it in a way that drives coverage. We don’t just inform—we spark media interest, build credibility, and put your brand in front of the right audiences.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "The High Cost of Poor Press Releases",
+    description:
+      "Most press releases end up in the trash—and it's usually because they read like ads, not news. Journalists are flooded with generic, over-promotional content that lacks story value. That’s why 90% of press releases go unpublished. We flip the script by uncovering the real story behind your announcement and crafting headlines that demand attention. Our team formats every release to meet newsroom standards and ensures it reaches the right reporters through a targeted distribution strategy. The result? Greater media visibility, stronger backlinks, and real ROI from every release.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+  heading: "Media-Ready Writing",
+  description:
+    "Journalists don’t rewrite releases—they publish the ones that are ready. That’s why we write every piece to newsroom standards: clean AP style formatting, clear headlines, strong intros, and impactful quotes. We ensure each release includes all the essentials—relevant media assets, contact info, and a well-structured narrative. It’s not fluff—it’s credible, news-ready content designed to get published, not passed over.",
+};
+
+const leftSideContent = {
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+  heading: "Strategic Distribution",
+  description:
+    "A great press release needs the right eyes. We start by building media lists tailored to your niche—tech, local, B2B, or beyond. Then we distribute via trusted newswire services like PR Newswire, ensuring it reaches verified outlets. From niche blogs to national media, our approach includes vertical placement, regional targeting, and direct reporter pitching. Every distribution is tracked, followed up, and optimized for maximum exposure.",
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <CraftingSolution />
-      <DetailContent
-      content={detailcontent}
-      />
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionContentMarketing content={HeroSectionContent} />
+      <Services content={servicesContent} />
 
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

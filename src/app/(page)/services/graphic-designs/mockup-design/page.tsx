@@ -1,138 +1,188 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
-import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+import HeroSection from "@/components/graphic-designing/HeroSection";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import { FileText, Film, Home, Package, Shirt, Smartphone } from "lucide-react";
 
 const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+  title: "Stunning Mockups That Bring Designs to Life",
+  button: {
+    name: "Get Custom Mockups",
+    link: "/mockup-design",
+  },
+  description:
+    "Photorealistic mockups that showcase your designs in real-world contexts, helping clients visualize products and make confident decisions.",
+  client: [
+    {
+      count: 2500,
+      des: "Mockups created for global brands",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      count: 99,
+      des: "Client satisfaction rate with our mockups",
+    },
+  ],
+  bannerImage:
+    "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Mockup Design Services",
+    subtitle: "High-fidelity mockups for all your presentation needs",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: Package,
+      title: "Product Packaging Mockups",
+      description:
+        "3D-rendered mockups showing your packaging in realistic environments",
+      features: [
+        "Brand-Applied Designs",
+        "Multiple Angle Views",
+        "Material Textures",
+        "Lifestyle Contexts",
+      ],
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: Smartphone,
+      title: "Device Mockups",
+      description: "Screens and interfaces displayed on real-looking devices",
+      features: [
+        "All Device Types",
+        "Screen Animations",
+        "Multiple Colorways",
+        "Environment Reflections",
+      ],
+    },
+    {
+      icon: FileText,
+      title: "Print Material Mockups",
+      description: "Business collateral shown in natural usage scenarios",
+      features: ["Business Cards", "Brochures", "Stationery", "Billboards"],
+    },
+    {
+      icon: Shirt,
+      title: "Apparel Mockups",
+      description: "Clothing and merchandise with your designs applied",
+      features: [
+        "Multiple Garment Types",
+        "Realistic Folds & Shadows",
+        "Body Angles",
+        "Fabric Textures",
+      ],
+    },
+    {
+      icon: Home,
+      title: "Environmental Mockups",
+      description: "Signage and branding in physical spaces",
+      features: [
+        "Retail Spaces",
+        "Office Environments",
+        "Trade Show Booths",
+        "Vehicle Wraps",
+      ],
+    },
+    {
+      icon: Film,
+      title: "Animated Mockups",
+      description: "Moving mockups for dynamic presentations",
+      features: [
+        "3D Product Rotations",
+        "UI Interactions",
+        "Packaging Unboxing",
+        "Social Media Formats",
+      ],
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Mockup Design Success Stories",
+    subtitle: "How our realistic mockups have helped clients win approvals",
+  },
+  paraContent: [
+    {
+      heading: "Packaging Design: 40% Faster Approvals",
+      text: "Photorealistic mockups reduced client revision cycles",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
+    },
+    {
+      heading: "App Launch: 75% More Investor Interest",
+      text: "Animated device mockups showcased UX effectively",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    },
+    {
+      heading: "Rebranding: 100% Stakeholder Buy-In",
+      text: "Comprehensive mockup suite demonstrated full brand application",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    },
+    {
+      heading: "E-commerce: 30% Fewer Returns",
+      text: "Accurate product mockups set correct expectations",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 50,
+      text: "Different product categories covered",
+    },
+    {
+      number: 4,
+      text: "Hours average turnaround for standard mockups",
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "Why Professional Mockups Matter",
+    description:
+      "Mockups are more than just visuals—they're persuasive tools that help your designs sell. Professional mockups increase approval rates and drive better conversions by presenting your work in hyper-realistic settings. We use advanced 3D modeling techniques, paired with expert lighting and composition, to make your designs feel tangible and polished. Every detail matters—from how textures catch the light to how reflections behave in realistic environments. These nuances build trust with clients, elevate perceived value, and communicate your design vision clearly. Whether it’s packaging, branding, or UI, our mockups help you close deals with confidence.",
+  },
+  {
+    title: "The Limitations of Basic Mockups",
+    description:
+      "Basic mockups often fall flat, using off-the-shelf templates that don’t accurately reflect your unique design or product materials. They can misrepresent colors, distort proportions, and fail to capture real-world lighting. We solve this with a premium approach: custom 3D modeling tailored to your specs, precise material and color matching, and realistic render setups that mirror actual product environments. Our process gives you multiple angles and high-resolution outputs that feel production-ready. The result? Mockups that eliminate guesswork, build client trust, and streamline the transition from concept to production.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  heading: "Our Mockup Process",
+  description:
+    "Our mockup process is structured for both precision and visual impact. We begin by analyzing your artwork and technical requirements to determine the best approach. From there, we select or create the appropriate 3D base model. Materials and textures are applied with care, using calibrated color systems to ensure accuracy. Lighting is staged to replicate professional studio conditions or realistic environments, depending on your use case. Once rendered in high resolution, we refine the output in post-production. You’ll receive polished mockups from multiple angles, ready for client pitches, production previews, or e-commerce use.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Mockup Applications",
+  description:
+    "Mockups are essential across the creative lifecycle—from concept approval to marketing execution. In pitch presentations, they help clients visualize your ideas in context, dramatically improving buy-in. For e-commerce or crowdfunding, they act as product stand-ins before production begins. Designers use them to validate packaging concepts or test branding in real-world settings. They're also valuable in your portfolio, showcasing your work in polished, professional environments. On social media, custom mockups grab attention and elevate your brand’s aesthetic. Whether you're selling an idea or a product, mockups add the visual clarity that words alone can't achieve.",
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

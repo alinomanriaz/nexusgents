@@ -1,138 +1,176 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
-import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import { FaUsers, FaMobile, FaQrcode } from "react-icons/fa";
+import { IoMdMegaphone } from "react-icons/io";
+import { MdEvent, MdOutlineCelebration } from "react-icons/md";
+import HeroSectionContentMarketing from "@/components/content-marketing/HeroSectionContentMarketing";
 
-const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+import { FaMobileAlt } from "react-icons/fa";
+
+const HeroSectionContent = {
+  fheading: "Immersive Experiences That",
+  sheading: "Amplify Your Brand",
+  subheading:
+    "Turn passive audiences into engaged communities through unforgettable activations that drive emotional connections and measurable business results.",
+  list: [
+    {
+      Icon: MdEvent,
+      text: "Pop-Up Experiences",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      Icon: FaMobileAlt,
+      text: "Interactive Tech Activations",
+    },
+    {
+      Icon: IoMdMegaphone,
+      text: "Influencer Collaborations",
+    },
+    {
+      Icon: FaQrcode,
+      text: "O2O Campaigns",
+    },
+  ],
+  fbutton: {
+    link: "/contact",
+    name: "Plan Your Activation",
+  },
+  sbutton: {
+    link: "/portfolio",
+    name: "See Case Studies",
+  },
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Brand Activation Services",
+    subtitle: "From strategy to execution - we bring brands to life",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: MdEvent, // Event icon
+      title: "Experiential Pop-Ups",
+      description:
+        "Physical/digital hybrid spaces that create Instagrammable moments and direct consumer engagement.",
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: FaMobile, // Mobile icon
+      title: "Digital Activations",
+      description:
+        "AR filters, interactive kiosks, and gamified mobile experiences that bridge online/offline worlds.",
+    },
+    {
+      icon: IoMdMegaphone, // Megaphone icon
+      title: "Influencer Collaborations",
+      description:
+        "Strategic partnerships with nano/micro-influencers for authentic brand storytelling.",
+    },
+    {
+      icon: FaQrcode, // QR code icon
+      title: "O2O Campaigns",
+      description:
+        "Seamless offline-to-online journeys using NFC, QR codes, and location-based triggers.",
+    },
+    {
+      icon: MdOutlineCelebration, // Celebration icon
+      title: "Product Launches",
+      description:
+        "360° launch campaigns combining PR stunts, sampling, and digital amplification.",
+    },
+    {
+      icon: FaUsers, // Community icon
+      title: "Community Building",
+      description:
+        "Long-term engagement strategies that turn customers into brand advocates.",
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Activation Success Stories",
+    subtitle: "Campaigns that moved the needle",
+  },
+  paraContent: [
+    {
+      heading: "Beverage Brand: 500K+ Samples Distributed",
+      text: "College tour activation with AR selfie stations driving UGC content",
+      image:
+        "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+    },
+    {
+      heading: "Tech Launch: 1.2M Social Impressions",
+      text: "Interactive pop-up with VR product demos and live-streamed influencer takeovers",
+      image:
+        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
+    },
+    {
+      heading: "Fashion Label: 300% ROI",
+      text: "Secret location pop-up with NFC-enabled VIP access and digital collectibles",
+      image:
+        "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&q=80",
+    },
+    {
+      heading: "Nonprofit: 10K Pledges Collected",
+      text: "Interactive art installation with real-time social media visualization",
+      image:
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 200,
+      text: "Successful activations executed",
+    },
+    {
+      number: 85,
+      text: "Average increase in social engagement",
+      isPercentage: true,
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "Why Invest in Brand Activations?",
+    description:
+      "Investing in brand activations is essential for creating memorable, meaningful connections between your brand and your target audience. Unlike traditional advertising, brand activations engage consumers through interactive experiences that build emotional ties and encourage direct participation. This hands-on approach increases brand awareness, loyalty, and word-of-mouth promotion by making your message tangible and relatable. Activations can differentiate your brand in crowded markets, turning passive observers into active advocates. They also provide valuable real-time feedback and insights into consumer behavior. Ultimately, brand activations drive deeper engagement, boost sales, and create lasting impressions that help grow your brand’s presence and impact.",
+  },
+  {
+    title: "Beyond Basic Sampling",
+    description:
+      "Going beyond basic sampling means transforming a simple product giveaway into an immersive brand experience that truly resonates with consumers. Instead of just handing out samples, advanced sampling strategies engage potential customers through personalized interactions, storytelling, and creative presentations. This approach builds excitement, educates audiences about product benefits, and fosters genuine connections. Enhanced sampling can include digital integration, exclusive offers, or follow-up campaigns that extend engagement beyond the initial touchpoint. By elevating sampling efforts, brands increase the likelihood of trial, conversion, and long-term loyalty — turning a basic sample into a powerful marketing tool that drives meaningful results.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&q=80",
+  heading: "Our Activation Toolkit",
+  description: `Our Activation Toolkit is a comprehensive collection of resources and strategies designed to help you execute impactful brand activations with ease. It includes customizable templates for event planning, promotional materials, and digital campaigns that ensure consistent branding and messaging. The toolkit offers practical guides on audience engagement techniques, social media integration, and data collection methods to maximize reach and effectiveness. We also provide tools for tracking performance and measuring ROI, allowing you to refine and improve future activations. With our Activation Toolkit, you gain everything needed to create memorable, engaging experiences that connect your brand with your audience and drive lasting results.`,
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&q=80",
+  heading: "Key Activation Metrics",
+  description: `Measuring the success of brand activations requires tracking key metrics that reflect both engagement and impact. Important activation metrics include attendance or reach, which shows how many people interacted with your event or campaign. Engagement rates, such as social media interactions, participation in activities, or time spent at the activation, reveal how involved your audience was. Conversion metrics track how many participants took desired actions, like signing up, making a purchase, or requesting more information. Brand awareness and sentiment can be measured through surveys or social listening tools to gauge changes in perception. ROI (Return on Investment) helps assess the financial effectiveness of the activation. Tracking these metrics enables data-driven decisions to optimize future campaigns and maximize results.`,
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionContentMarketing content={HeroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

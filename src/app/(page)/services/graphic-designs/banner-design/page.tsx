@@ -1,138 +1,202 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
+import HeroSection from "@/components/graphic-designing/HeroSection";
+import React from "react";
 import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  BarChart2,
+  Mail,
+  Monitor,
+  Share2,
+  ShoppingCart,
+  Smartphone,
+} from "lucide-react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
 
 const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+  title: "High-Converting Banner Designs That Capture Attention",
+  button: {
+    name: "Get Custom Banners",
+    link: "/banner-design",
+  },
+  description:
+    "Professional banner designs that boost click-through rates, enhance brand recognition, and drive conversions across all digital platforms.",
+  client: [
+    {
+      count: 1200,
+      des: "Banners designed for clients across industries",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      count: 85,
+      des: "Average increase in click-through rates",
+    },
+  ],
+  bannerImage:
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Banner Design Services",
+    subtitle:
+      "Eye-catching designs optimized for performance across all platforms",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: Monitor,
+      title: "Website Banners",
+      description:
+        "Hero banners, promotional banners, and CTAs designed to maximize conversions",
+      features: [
+        "Responsive Designs",
+        "Fast Loading",
+        "A/B Tested",
+        "Brand Consistent",
+      ],
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: Smartphone,
+      title: "Mobile Ads",
+      description: "Vertical and square banners optimized for mobile viewing",
+      features: [
+        "Mobile-First Design",
+        "Thumb-Friendly CTAs",
+        "App Store Compliant",
+        "High Visibility",
+      ],
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-commerce Banners",
+      description: "Product banners and promotional graphics that drive sales",
+      features: [
+        "Product-Focused",
+        "Seasonal Designs",
+        "Clear Value Props",
+        "Urgency Elements",
+      ],
+    },
+    {
+      icon: Share2,
+      title: "Social Media Banners",
+      description:
+        "Platform-specific designs for Facebook, Instagram, LinkedIn, and more",
+      features: [
+        "Platform-Optimized",
+        "Share-Worthy",
+        "Engagement Focused",
+        "Story Formats",
+      ],
+    },
+    {
+      icon: Mail,
+      title: "Email Headers",
+      description: "Professional email banners that improve open rates",
+      features: [
+        "Dark Mode Ready",
+        "Alt-Text Optimized",
+        "Mobile Responsive",
+        "Brand Consistent",
+      ],
+    },
+    {
+      icon: BarChart2,
+      title: "Display Ads",
+      description: "IAB standard display ads for programmatic advertising",
+      features: [
+        "Multiple Sizes",
+        "Animated Options",
+        "High CTR Designs",
+        "Retargeting Ready",
+      ],
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Banner Design Success Stories",
+    subtitle: "How our strategic designs have improved campaign performance",
+  },
+  paraContent: [
+    {
+      heading: "E-commerce: 75% Higher CTR",
+      text: "Redesigned product banners increased click-through rates by 75% compared to previous versions.",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
+    },
+    {
+      heading: "SaaS Company: 40% More Signups",
+      text: "Optimized hero banners on landing pages improved conversion rates significantly.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    },
+    {
+      heading: "Mobile App: 3X More Installs",
+      text: "App store banners with clear value propositions boosted install rates.",
+      image:
+        "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80",
+    },
+    {
+      heading: "Retail: 50% More Engagement",
+      text: "Seasonal social media banners increased engagement and shares.",
+      image:
+        "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 500,
+      text: "Banner designs created for digital campaigns",
+    },
+    {
+      number: 3,
+      text: "Average return on ad spend (ROAS) for designed banners",
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "Why Professional Banner Design Matters",
+    description:
+      "High-converting banners can boost click-through rates by up to 85% over generic designs. Our banner design process blends conversion psychology with visual best practices to capture attention and inspire action. We focus on a clear visual hierarchy, compelling imagery, and strategic calls-to-action tailored to your platform and audience. Every banner is crafted to communicate your message instantly and motivate engagement. This approach helps your brand stand out amid digital noise, increasing both visibility and ROI. Our designers balance creativity with data-driven insights for optimal performance. When done right, banners become powerful tools that turn viewers into customers.",
+  },
+  {
+    title: "The Hidden Costs of Poor Banner Design",
+    description:
+      "Generic or outdated banners often fail to attract attention in today’s busy digital landscape, resulting in lost opportunities and wasted ad spend. Common issues we fix include unclear messaging, weak calls-to-action, poor mobile optimization, slow loading times, and inconsistent branding. Our design team creates banners that not only stand out visually but also load quickly and comply with platform standards. This ensures your ads get maximum visibility and clicks. Investing in professional banner design helps avoid the hidden costs of low engagement, enhances your brand’s credibility, and drives measurable results. We deliver banners built to perform across all channels.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=800&q=80",
+  heading: "Strategic Banner Design Process",
+  description:
+    "Our proven approach begins with in-depth audience and platform research to understand where your banners will appear and who they must engage. We craft conversion-focused layouts that highlight key messages and direct users clearly. Attention-grabbing visuals and clear value propositions work hand-in-hand with strong calls-to-action designed to motivate clicks. We create multiple A/B testing variations to find the most effective version. All banners are technically optimized to load fast and perform smoothly on every device. Ultimately, we deliver banners that are designed not just to look good, but to drive real results for your campaigns.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+  heading: "Multi-Platform Optimization",
+  description:
+    "We optimize banners for maximum impact on every platform you use. For websites, we build fully responsive designs that look great on all screen sizes and devices. On social media, we customize dimensions and styles for each platform to ensure compliance and visual appeal. Email banners are crafted to be dark-mode compatible and include alt-text for accessibility. Display ads follow IAB standard sizes and use retina-ready graphics for sharp visuals. Mobile app banners are designed to meet app store guidelines and perform flawlessly. We also track performance across all placements, giving you data to continuously improve your campaigns.",
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

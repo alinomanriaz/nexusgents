@@ -1,138 +1,187 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import { FaUsers } from "react-icons/fa";
+import HeroSectionContentMarketing from "@/components/content-marketing/HeroSectionContentMarketing";
+
+import { FaMobileAlt } from "react-icons/fa";
+
 import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  FaBuilding,
+  FaFileAlt,
+  FaChartLine,
+  FaGlobe,
+  FaPrint,
+} from "react-icons/fa";
+import { IoMdBusiness } from "react-icons/io";
+import { MdOutlineDesignServices } from "react-icons/md";
 
-const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+// Hero Section
+const HeroSectionContent = {
+  fheading: "Professional Profiles That",
+  sheading: "Elevate Your Business",
+  subheading:
+    "Powerful company profiles that communicate your brand story, showcase your capabilities, and open doors to new opportunities.",
+  list: [
+    {
+      Icon: FaBuilding,
+      text: "Corporate Branding",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      Icon: FaFileAlt,
+      text: "Investor-Ready Documents",
+    },
+    {
+      Icon: MdOutlineDesignServices,
+      text: "Custom Design",
+    },
+    {
+      Icon: FaGlobe,
+      text: "Multi-Format Delivery",
+    },
+  ],
+  fbutton: {
+    link: "/quote",
+    name: "Get a Quote",
+  },
+  sbutton: {
+    link: "/portfolio",
+    name: "View Samples",
+  },
+};
 
-
-}
+// Services Content
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Company Profile Services",
+    subtitle: "Comprehensive solutions to showcase your business",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: IoMdBusiness,
+      title: "Corporate Profile Design",
+      description:
+        "Professional layouts that reflect your brand identity and corporate values.",
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: FaFileAlt,
+      title: "Investor Pitch Decks",
+      description:
+        "Compelling presentations to attract funding and partnerships.",
+    },
+    {
+      icon: FaUsers,
+      title: "Capability Statements",
+      description:
+        "Detailed overviews of your services, expertise, and differentiators.",
+    },
+    {
+      icon: FaChartLine,
+      title: "Annual Reports",
+      description:
+        "Financial and operational summaries with engaging data visualization.",
+    },
+    {
+      icon: FaMobileAlt,
+      title: "Digital Profiles",
+      description:
+        "Interactive PDFs and web-based profiles with multimedia elements.",
+    },
+    {
+      icon: FaPrint,
+      title: "Print-Ready Files",
+      description: "High-resolution files optimized for professional printing.",
+    },
+  ],
+};
 
-export default page
+// Success Stories
+const workExperienceContent = {
+  titles: {
+    title: "Profile Success Stories",
+    subtitle: "Documents that made an impact",
+  },
+  paraContent: [
+    {
+      heading: "Tech Startup: Secured $2M Funding",
+      text: "Investor deck that clearly communicated their IP and market potential",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    },
+    {
+      heading: "Manufacturer: 40% More RFPs Won",
+      text: "Capability statement that highlighted their unique production processes",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    },
+    {
+      heading: "Consulting Firm: 3X Client Engagement",
+      text: "Interactive digital profile with case study videos and testimonials",
+      image:
+        "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&q=80",
+    },
+    {
+      heading: "Nonprofit: 60% More Donations",
+      text: "Annual report that effectively showcased their community impact",
+      image:
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 300,
+      text: "Profiles developed across industries",
+    },
+    {
+      number: 95,
+      text: "Client satisfaction rate",
+      isPercentage: true,
+    },
+  ],
+};
+
+// Detail Content
+const detailcontent = [
+  {
+    title: "Why Professional Profiles Matter",
+    description:
+      "Professional profiles are vital for companies because they shape how the organization and its team are perceived by clients, partners, and potential hires. A strong company profile—along with well-crafted employee bios—builds credibility, communicates brand values, and showcases expertise across leadership and staff. These profiles reinforce trust and professionalism, helping to attract top talent, win new business, and establish industry authority. In B2B contexts, clients often research team members before signing contracts, making professional profiles a key part of the decision-making process. Internally, they promote a unified, polished image that reflects the company’s standards. Simply put, professional profiles are powerful branding tools that contribute to a company’s reputation, visibility, and long-term success.",
+  },
+  {
+    title: "Beyond Basic Brochures",
+    description:
+      "Going beyond basic brochures means creating marketing materials that truly capture attention and engage your audience. Instead of just listing information, advanced brochures use compelling storytelling, striking visuals, and interactive elements to communicate your brand’s unique value. They are thoughtfully designed to guide readers through your key messages with clarity and impact. Beyond the standard fold, these brochures may include custom finishes, innovative formats, or personalized content tailored to specific clients or events. This elevated approach not only boosts brand perception but also drives stronger responses and lasting impressions. When you go beyond basic brochures, you transform a simple handout into a powerful marketing tool that reflects professionalism and creativity.",
+  },
+];
+
+// Right/Left Content
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Our Profile Components",
+  description: `Our professional profiles are built with carefully selected components to showcase your strengths and tell your unique story effectively. We start with a compelling headline that grabs attention and clearly states your role or expertise. A concise summary follows, highlighting your key skills, experiences, and career goals. We include detailed sections for work history and accomplishments, emphasizing results and impact rather than just responsibilities. Education, certifications, and relevant training are presented to support your qualifications. Additionally, we incorporate endorsements, recommendations, or testimonials when available to build credibility. Optional elements like portfolio links, social media handles, or personal interests add personality and depth. Together, these components create a well-rounded, engaging profile that stands out to employers and networks alike.`,
+};
+
+const leftSideContent = {
+  image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80",
+  heading: "Output Formats",
+  description: `We provide a variety of output formats to meet diverse needs and preferences, ensuring your documents are accessible and professional across platforms. Common formats include PDF for universal compatibility and easy sharing, Microsoft Word for easy editing and customization, and plain text versions optimized for online applications and applicant tracking systems (ATS). For digital portfolios or online profiles, we offer web-friendly formats such as HTML or interactive presentations. Print-ready files are also available, formatted to the highest standards for clarity and design integrity. By offering flexible output options, we make sure your CV, profile, or marketing materials look polished and perform well no matter how or where they’re viewed.`,
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionContentMarketing content={HeroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

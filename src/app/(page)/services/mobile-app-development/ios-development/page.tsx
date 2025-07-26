@@ -1,133 +1,157 @@
-import React from 'react'
-import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Users,
-  Zap
-} from "lucide-react"
-import HeroSection from '@/components/app-developement/HeroSection'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+import React from "react";
+import HeroSection from "@/components/web-developement/HeroSection";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+
+import { FaApple, FaAppStoreIos, FaSyncAlt, FaBolt } from "react-icons/fa";
+
+import { IoWatchOutline } from "react-icons/io5";
+
+import { MdSecurity } from "react-icons/md";
 
 const heroContent = {
-  tag: 'Premium Development Services',
-  title: 'Build Your Dream',
-  colortitle: 'Digital Product',
-  subtitle: 'From concept to deployment, we create stunning web applications, mobile apps, and digital solutions that drive your business forward.',
+  tag: "iOS Development Experts",
+  title: "Build Premium",
+  colortitle: "iOS Applications",
+  subtitle:
+    "Native iOS apps with Swift that deliver exceptional user experiences, flawless performance, and seamless Apple ecosystem integration.",
   button: {
-    name: 'Portfolio',
-    link: "https://dev-ale.vercel.app"
+    name: "See Our Apps",
+    link: "https://dev-ale.vercel.app/ios",
   },
-  image: 'https://picsum.photos/600/400?random=3'
-}
+  image:
+    "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&q=80",
+};
+
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our iOS Development Services",
+    subtitle: "End-to-end solutions for the Apple ecosystem",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: FaApple, // Apple logo
+      title: "Native iOS Development",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "SwiftUI and UIKit apps with Combine, Core Data, and modern Swift conventions for premium user experiences.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: FaAppStoreIos, // App Store icon
+      title: "App Store Deployment",
+      description:
+        "App Store optimization, TestFlight management, and in-app purchase/subscription implementations.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: MdSecurity, // Security icon
+      title: "Privacy & Security",
+      description:
+        "Face ID/Touch ID auth, Keychain Services, data encryption, and App Attest implementation.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: FaSyncAlt, // Sync icon
+      title: "Offline-First Solutions",
+      description:
+        "Core Data/Realm implementations with CloudKit sync and conflict resolution strategies.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: FaBolt, // Performance icon
+      title: "Performance Tuning",
+      description:
+        "Instruments optimization, memory management, and Metal acceleration for graphics-heavy apps.",
     },
     {
-      icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      icon: IoWatchOutline, // Watch icon
+      title: "Apple Ecosystem Apps",
+      description:
+        "watchOS, iPadOS, macOS, and CarPlay versions with shared Swift codebase.",
     },
-  ]
-}
+  ],
+};
+
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "iOS Success Stories",
+    subtitle: "Crafting exceptional Apple ecosystem experiences",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "Health App: Featured by Apple",
+      text: "HealthKit integrated fitness tracker with Activity Rings synchronization",
+      image:
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "Banking App: 100% Uptime",
+      text: "Financial app with Face ID authentication and Apple Pay integration",
+      image:
+        "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=800&q=80",
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "AR Retail: 35% Sales Increase",
+      text: "ARKit shopping experience with RealityKit 3D product previews",
+      image:
+        "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800&q=80",
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Medical App: HIPAA Compliant",
+      text: "Secure health records app with CareKit and ResearchKit integrations",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 75,
+      text: "App Store published apps",
+    },
+    {
+      number: 4.9,
+      text: "Average App Store rating",
+      isDecimal: true,
+    },
+  ],
+};
+
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Native iOS Development?",
+    description:
+      "Native iOS development ensures the highest level of performance, reliability, and user experience by using Apple’s official tools and languages like Swift and Objective-C. It allows deep integration with iOS-specific features such as Face ID, ARKit, and Siri, unlocking the full potential of the device hardware and software. Native apps offer faster load times, smoother animations, and better responsiveness compared to cross-platform alternatives. They also provide seamless access to Apple’s ecosystem, including iCloud, Apple Pay, and the App Store’s latest capabilities. With native development, updates and new iOS versions are supported promptly and reliably. Security features are stronger thanks to Apple’s built-in protections. Overall, native iOS apps deliver a polished, future-proof experience that maximizes user satisfaction and engagement. For quality and longevity, native iOS development is the smart choice.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "Beyond Basic iOS Apps",
+    description:
+      "We build iOS apps that go beyond the basics, combining innovation, scalability, and seamless user experiences. Our apps feature advanced functionalities like AR experiences with ARKit, machine learning with Core ML, and voice control via SiriKit. We design for smooth offline access, real-time syncing through iCloud, and robust security with biometric authentication. Custom integrations with third-party services and APIs create versatile, connected ecosystems. With attention to sleek design, performance optimization, and continuous updates, our apps deliver lasting value. Whether launching an MVP or a complex enterprise solution, we push the boundaries of what iOS apps can do. Your vision inspires cutting-edge apps tailored to Apple’s ecosystem. Expect more than basic — expect brilliance.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+  heading: "Our iOS Stack",
+  description: `Our iOS stack is built on modern, scalable technologies that deliver high-performance, native iOS apps. We use Swift and SwiftUI for clean, efficient code and smooth, responsive interfaces. Xcode and Instruments power our development and performance profiling, while Combine and Core Data manage reactive data flows and local storage. For advanced features, we integrate ARKit, Core ML, SiriKit, and HealthKit. Networking is handled using Alamofire or native URLSession, with secure communication via SSL pinning. CI/CD is streamlined through tools like Fastlane and GitHub Actions. Rigorous testing is done with XCTest and XCUITest to ensure stability. Our stack is optimized to build fast, secure, and future-proof apps for the Apple ecosystem.`,
+};
+
+const leftSideContent = {
+  image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&q=80",
+  heading: "iOS Features We Build",
+  description: `We craft iOS apps packed with powerful, user-focused features that elevate performance and experience. From Face ID and Touch ID authentication to Siri integration and Apple Pay, we build for seamless functionality. Our apps support real-time data syncing with iCloud, smooth Handoff between Apple devices, and push notifications that drive engagement. We leverage Swift and SwiftUI to build fast, responsive, and beautifully designed interfaces. Features like in-app purchases, ARKit for augmented reality, and Core ML for machine learning add smart capabilities. Battery optimization, offline access, and smooth animations are built-in standards. We also ensure App Store compliance and smooth updates with CI/CD pipelines. Every feature we build is optimized for Apple’s ecosystem—secure, intuitive, and future-ready.`,
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSection
-        content={heroContent}
-      />
-
-      <Services
-        content={servicesContent}
-      />
-
-      <WorkExperiances
-        content={workExperienceContent}
-      />
-
-      <DetailContent
-        content={detailcontent}
-      />
-
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

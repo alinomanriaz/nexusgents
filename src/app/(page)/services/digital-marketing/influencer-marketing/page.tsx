@@ -1,125 +1,189 @@
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import SeoAnalytics from '@/components/digital-marketing/SeoAnalytics'
-import React from 'react'
+import HeroSectionMarketing from "@/components/digital-marketing/HeroSectionMarketing";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import SecondSection from '@/components/digital-marketing/SecondSection'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  FaCertificate,
+  FaChartLine,
+  FaCreativeCommons,
+  FaFileContract,
+  FaHandshake,
+  FaHashtag,
+  FaMicrophone,
+  FaRocket,
+  FaSearch,
+  FaSeedling,
+  FaShoppingCart,
+  FaUserTie,
+} from "react-icons/fa";
 
+const heroSectionContent = {
+  fWord: "INFLUENCER",
+  Ficon: FaUserTie,
+  Sicon: FaRocket,
+  Thicon: FaHandshake,
+  SWord: "MARKETING",
+  Text: "THAT BUILDS TRUST & DRIVES SALES",
+  subheading:
+    "Leverage authentic creator partnerships to reach engaged audiences. We design data-driven influencer campaigns that generate buzz, boost credibility, and deliver measurable ROI.",
+  Fbuttons: {
+    link: "/contact",
+    name: "Get a Free Strategy Call",
+  },
+  Sbuttons: {
+    link: "#services",
+    name: "See Campaign Results",
+  },
+};
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Influencer Marketing Services",
+    subtitle:
+      "End-to-end creator partnership strategies tailored to your brand goals—from nano-influencers to celebrity collaborations.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: FaSearch,
+      title: "Influencer Identification",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "Data-backed selection using engagement rates, audience demographics, and brand affinity scoring.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: FaFileContract,
+      title: "Contract Negotiation",
+      description:
+        "Rate benchmarking and legal agreements that protect your interests while ensuring creator satisfaction.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: FaHashtag,
+      title: "Campaign Strategy",
+      description:
+        "Platform-specific approaches (Instagram, TikTok, YouTube) with clear KPIs and content guidelines.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: FaCreativeCommons,
+      title: "Content Amplification",
+      description:
+        "Repurpose influencer content across paid ads, organic social, and website to maximize ROI.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: FaShoppingCart,
+      title: "Affiliate & Commission Programs",
+      description:
+        "Performance-based partnerships with trackable promo codes and affiliate links.",
     },
     {
-      icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      icon: FaMicrophone,
+      title: "Influencer Events & Takeovers",
+      description:
+        "Live streams, product launches, and account takeovers for real-time engagement.",
     },
-  ]
-}
+    {
+      icon: FaChartLine,
+      title: "Performance Tracking",
+      description:
+        "Monitor impressions, engagement, conversions, and earned media value.",
+    },
+    {
+      icon: FaSeedling,
+      title: "Long-Term Ambassador Programs",
+      description:
+        "Ongoing partnerships with tiered incentives for sustained brand advocacy.",
+    },
+    {
+      icon: FaCertificate,
+      title: "Compliance & Disclosure",
+      description:
+        "Ensure FTC/ASA compliance with proper sponsorship disclosures.",
+    },
+  ],
+};
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Influencer Campaign Success Stories",
+    subtitle:
+      "How strategic creator partnerships drove brand awareness and conversions for our clients.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "Beauty Brand: 20M+ Impressions",
+      text: "Micro-influencer UGC campaign generated 3,500+ purchases and 12K new followers.",
+      image:
+        "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80", // Makeup application
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "Fitness App: 300% ROI",
+      text: "Tikker challenge with fitness creators drove 8,200 app downloads in 30 days.",
+      image:
+        "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80", // Gym influencer
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "Food Brand: Viral Recipe Videos",
+      text: "YouTube recipe tutorials by mid-tier creators averaged 500K+ views per video.",
+      image:
+        "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80", // Cooking content
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Tech Startup: 45% Conversion Rate",
+      text: "B2B LinkedIn influencer campaign generated 320 qualified leads.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80", // Office discussion
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 12,
+      text: "Average earned media value (EMV) for every $1 spent on influencer campaigns.",
+    },
+    {
+      number: 68,
+      text: "Percentage of consumers who trust influencer opinions over brand content.",
+    },
+  ],
+};
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Influencer Marketing Outperforms Traditional Advertising",
+    description:
+      "Influencer content delivers 11X higher ROI than traditional digital marketing channels. Authentic creator partnerships offer social proof, tap into niche communities, and overcome ad fatigue effectively. Our approach prioritizes 'right-fit' influencers—not just large followings, but engaged audiences aligned with your brand values. We measure success beyond vanity metrics by tracking real conversions from swipe-ups, promo codes, and affiliate links. This strategy ensures your campaigns are impactful, targeted, and efficient.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "The Pitfalls of DIY Influencer Programs",
+    description:
+      "Without proper vetting, brands risk working with influencers who have fake followers or low engagement, wasting resources. Our proprietary screening process assesses audience quality, brand safety, and past campaign performance thoroughly. We manage negotiations, content approvals, and FTC compliance to save you time and ensure professional execution. The outcome? Influencer campaigns that deliver measurable business results, not just inflated impressions or empty engagement.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
+  heading: "Authentic Storytelling",
+  description:
+    "Influencers bring your brand to life with relatable, authentic narratives. We support creators in developing content that feels natural—not salesy—while guiding their audience smoothly through the buyer’s journey. Strategic calls-to-action and product demos are integrated subtly to maintain trust and maximize impact. This storytelling approach helps build genuine connections that convert.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=800&q=80",
+  heading: "Data-Driven Partnerships",
+  description:
+    "Our influencer selection process digs deeper than follower counts by analyzing: audience demographic alignment, engagement rate benchmarks, brand affinity scores, past campaign conversion data, and content quality with aesthetic fit. This data-driven approach ensures every partnership is strategically matched to your brand’s goals and delivers measurable ROI.",
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <SecondSection />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <SeoAnalytics 
-    //   content={workExperienceContent}
-      />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <DetailContent
-      content={detailcontent}
-      />
-
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionMarketing content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

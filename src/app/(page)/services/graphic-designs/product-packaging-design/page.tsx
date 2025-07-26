@@ -1,138 +1,193 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
-import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+import HeroSection from "@/components/graphic-designing/HeroSection";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import { Box, Gift, Leaf, Palette, Repeat, ShoppingCart } from "lucide-react";
 
 const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+  title: "Impactful Packaging Designs That Sell Your Products",
+  button: {
+    name: "Design My Packaging",
+    link: "/packaging-design",
+  },
+  description:
+    "Strategic packaging designs that protect your product, communicate your brand, and drive purchases at the shelf.",
+  client: [
+    {
+      count: 1200,
+      des: "Packaging designs created for global brands",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      count: 95,
+      des: "Client satisfaction rate with our designs",
+    },
+  ],
+  bannerImage:
+    "https://images.unsplash.com/photo-1602488283247-29bf1f5b148a?w=800&q=80",
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Packaging Design Services",
+    subtitle: "End-to-end packaging solutions from concept to production",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: Box,
+      title: "Structural Packaging Design",
+      description:
+        "Custom packaging shapes that protect and showcase your product",
+      features: [
+        "3D Prototyping",
+        "Material Selection",
+        "Ergonomic Testing",
+        "Production-Ready Files",
+      ],
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: Palette,
+      title: "Graphic Packaging Design",
+      description: "Visual designs that communicate brand and product benefits",
+      features: [
+        "Brand-Centric Visuals",
+        "Regulatory Compliance",
+        "Shelf Impact Analysis",
+        "Color Management",
+      ],
+    },
+    {
+      icon: Leaf,
+      title: "Sustainable Packaging",
+      description: "Eco-friendly solutions that reduce environmental impact",
+      features: [
+        "Recyclable Materials",
+        "Minimalist Designs",
+        "Carbon Footprint Analysis",
+        "Eco-Certifications",
+      ],
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-commerce Packaging",
+      description: "Durable designs optimized for shipping and unboxing",
+      features: [
+        "Protective Engineering",
+        "Branded Unboxing Experience",
+        "Reduced Material Waste",
+        "Returns Optimization",
+      ],
+    },
+    {
+      icon: Gift,
+      title: "Luxury Packaging",
+      description: "Premium packaging for high-end products",
+      features: [
+        "Special Finishes",
+        "Custom Inserts",
+        "Tactile Elements",
+        "Premium Materials",
+      ],
+    },
+    {
+      icon: Repeat,
+      title: "Line Extensions",
+      description: "Consistent packaging systems for product variants",
+      features: [
+        "Flavor/Variant Differentiation",
+        "Size Adaptations",
+        "Seasonal Versions",
+        "Limited Editions",
+      ],
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Packaging Design Success Stories",
+    subtitle: "How our strategic packaging has driven product success",
+  },
+  paraContent: [
+    {
+      heading: "Skincare Brand: 40% Sales Increase",
+      text: "Shelf-standing redesign improved visibility and premium perception",
+      image:
+        "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=80",
+    },
+    {
+      heading: "Food Product: 75% Faster Shelf Recognition",
+      text: "Bold graphic redesign cut through category clutter",
+      image:
+        "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80",
+    },
+    {
+      heading: "Tech Gadget: 300% Social Shares",
+      text: "Innovative unboxing experience went viral",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
+    },
+    {
+      heading: "CPG Brand: 100% Compliance Achieved",
+      text: "Packaging redesign met all new regulatory requirements",
+      image:
+        "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 200,
+      text: "Different packaging materials we've worked with",
+    },
+    {
+      number: 15,
+      text: "Average percentage sales lift after redesign",
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "Why Professional Packaging Design Matters",
+    description:
+      "Packaging isn't just protection—it's your frontline salesperson. With 72% of purchase decisions made at the shelf, compelling packaging design can directly influence buying behavior and boost sales by up to 30%. Our approach merges structural integrity with brand storytelling to deliver packaging that not only looks good but performs. From shelf appeal to unboxing delight, every design is optimized for impact. We engineer packaging to reflect your brand values, connect with your audience, and drive conversions. It's design with a purpose—built to inform, inspire, and sell.",
+  },
+  {
+    title: "The Hidden Costs of Poor Packaging",
+    description:
+      "Bad packaging costs more than you think—damaged goods, customer dissatisfaction, and missed opportunities. That’s why we take a strategic approach to eliminate those risks. Our process ensures your packaging is engineered for durability, standout shelf presence, and cost efficiency. We use custom structural design, eye-catching graphics, and regulatory-safe materials to protect both your product and your reputation. From reducing returns to elevating your brand experience, our packaging isn’t an expense—it’s a competitive advantage and long-term business asset.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  heading: "Our Packaging Design Process",
+  description:
+    "We follow a comprehensive, strategy-first packaging design process. It begins with in-depth market and category research to understand trends, customer expectations, and competitors. Structural design is next—combining function with form through 3D modeling and prototyping. Visual branding is then applied with purpose-driven graphic design. We guide material selection to ensure durability and sustainability, followed by prototyping to validate the look and feel. Print-ready production files are prepared for seamless manufacturing, and we oversee quality control to ensure your final product meets the highest standards.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Packaging Design Expertise",
+  description:
+    "Our team brings deep cross-functional expertise to packaging design—from concept to shelf. We blend structural engineering to create sturdy, efficient formats with shelf-ready visuals that grab attention and tell your brand story. Our designs are compliant with industry regulations, sustainable by default, and built with the end-user in mind. Whether it’s creating standout unboxing moments or ensuring smooth production workflows, we cover every detail. With a focus on cost optimization and manufacturability, we deliver packaging that performs both visually and functionally—while staying aligned with your budget and goals.",
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;

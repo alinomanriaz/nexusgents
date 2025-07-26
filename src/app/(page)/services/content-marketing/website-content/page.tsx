@@ -1,122 +1,204 @@
-
-import HeroSectionMarketing from '@/components/digital-marketing/HeroSectionMarketing'
-import React from 'react'
+import React from "react";
 import {
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Users,
-  Zap
-} from "lucide-react"
-import ContentWithLeftImage from '@/components/digital-marketing/ContendWithLeftImage'
-import CraftingSolution from '@/components/digital-marketing/CraftingSolution'
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  FileText,
+  RefreshCw,
+  Mail,
+  Navigation,
+  List,
+  Search,
+  Phone,
+  UserCheck,
+  Home,
+  MousePointer,
+  Layers,
+  Clock,
+} from "lucide-react";
+
+import Services from "@/components/common-components/Services";
+import DetailContent from "@/components/common-components/DetailContent";
+import HeroSectionContentMarketing from "@/components/content-marketing/HeroSectionContentMarketing";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+
+const HeroSectionContent = {
+  fheading: "Strategic Website Content That",
+  sheading: "Converts Visitors to Customers",
+  subheading:
+    "Persuasive, SEO-optimized website copy that clearly communicates your value, builds trust, and guides users to take action.",
+  list: [
+    {
+      Icon: MousePointer,
+      text: "Higher Conversions",
+    },
+    {
+      Icon: Search,
+      text: "SEO-Optimized",
+    },
+    {
+      Icon: Layers,
+      text: "Strategic Structure",
+    },
+    {
+      Icon: Clock,
+      text: "Fast Turnaround",
+    },
+  ],
+  fbutton: {
+    link: "/website-content",
+    name: "Get Website Copy",
+  },
+  sbutton: {
+    link: "/portfolio",
+    name: "See Samples",
+  },
+};
 
 const servicesContent = {
   titles: {
-    title: 'Our SEO Services Include',
-    subtitle: 'Target the right audience at the right time.'
+    title: "Our Website Content Services",
+    subtitle:
+      "Comprehensive web copy solutions tailored to your brand voice and business goals.",
   },
   services: [
     {
-      icon: Globe,
-      title: "Web Development",
+      icon: Home,
+      title: "Homepage Copywriting",
       description:
-        "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+        "Compelling homepage content that captures attention and communicates your unique value proposition.",
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      icon: FileText,
+      title: "Service/Product Pages",
+      description:
+        "Persuasive pages that highlight benefits and drive conversions.",
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-      features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
+      icon: UserCheck,
+      title: "About Us Pages",
+      description:
+        "Authentic brand storytelling that builds connection and trust.",
     },
     {
-      icon: Code,
-      title: "Full-Stack Solutions",
-      description: "End-to-end development from frontend to backend with seamless integration",
-      features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
+      icon: Phone,
+      title: "Landing Pages",
+      description:
+        "High-converting pages designed for specific campaigns or offers.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your existing applications and improve user experience",
-      features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
+      icon: Search,
+      title: "SEO Content Strategy",
+      description:
+        "Keyword-optimized copy that ranks while maintaining natural flow.",
     },
     {
-      icon: Users,
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning for your digital transformation",
-      features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
+      icon: List,
+      title: "Website Messaging Framework",
+      description:
+        "Core messaging development for consistent brand communication.",
     },
-  ]
-}
+    {
+      icon: Navigation,
+      title: "Navigation & UX Copy",
+      description:
+        "Intuitive menu labels and microcopy that improves user experience.",
+    },
+    {
+      icon: Mail,
+      title: "Lead Capture Forms",
+      description: "High-converting form copy and call-to-action optimization.",
+    },
+    {
+      icon: RefreshCw,
+      title: "Content Refresh",
+      description: "Updating existing website copy to improve performance.",
+    },
+  ],
+};
+
 const workExperienceContent = {
   titles: {
-    title: 'Targeted Traffic and Conversion',
-    subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
+    title: "Website Content Success Stories",
+    subtitle:
+      "How our strategic web copy has helped businesses improve engagement and conversions.",
   },
   paraContent: [
     {
-      heading: 'Packaging Industry US',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://picsum.photos/600/400?random=3',
+      heading: "SaaS Company: 40% More Signups",
+      text: "Homepage and feature page rewrite increased free trial conversions.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     },
     {
-      heading: 'Packaging industry Canada',
-      text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
+      heading: "E-Commerce: 35% Higher AOV",
+      text: "Product page optimizations increased average order value.",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
     },
     {
-      heading: 'Packaging Industry in Pakistan',
-      text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-      image: 'https://picsum.photos/600/400?random=3'
+      heading: "Consulting Firm: 50% More Leads",
+      text: "Service page restructuring improved lead generation.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
     },
     {
-      heading: 'heading',
-      text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-      image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
+      heading: "Nonprofit: 3X More Donations",
+      text: "Emotional storytelling on key pages boosted donor conversion.",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     },
-  ]
-}
+  ],
+  countContent: [
+    {
+      number: 200,
+      text: "Websites transformed with high-converting copy",
+    },
+    {
+      number: 45,
+      text: "Average percentage increase in conversions after rewrite",
+    },
+  ],
+};
 const detailcontent = [
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+    title: "Why Professional Website Copy Matters",
+    description:
+      "Visitors decide whether to stay on your website within 3 seconds. Our conversion-focused web copy immediately communicates your value, builds credibility, and guides users toward action. We combine persuasive writing techniques with UX best practices to create content that not only informs but motivates. Each page is strategically structured with clear hierarchy, scannable formatting, and compelling calls-to-action. These elements are tailored specifically to your audience and business goals. The result is a website that feels intuitive and engaging. This approach increases visitor retention and boosts conversions effectively.",
   },
   {
-    title: 'Importance of Ecommerce Website Design for Business Expansion:',
-    description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-  }
-]
+    title: "The High Cost of Poor Website Content",
+    description:
+      "Weak web copy fails to differentiate your business, confuses visitors, and kills conversions. Common issues we fix include unclear value propositions, excessive jargon, weak calls-to-action, inconsistent messaging, and poor SEO foundations. Our proven website copywriting process involves in-depth audience research, competitive analysis, and conversion psychology principles. We craft content that truly works, aligning messaging with customer needs. The result? Websites that convert visitors into customers while communicating your brand effectively. Avoid costly mistakes with copy that resonates and performs.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+  heading: "Conversion-Focused Writing",
+  description:
+    "Our web copy includes benefit-driven headlines that grab attention and clear value propositions to engage visitors. Content is structured for easy scanning with strategic calls-to-action guiding users to act. We include trust-building elements to enhance credibility and implement SEO best practices to improve search rankings. Mobile-optimized formatting ensures a seamless experience across devices. Our approach is flexible, adapting to different industries and buyer journeys to maximize impact. The goal is to create copy that converts and supports your business growth effectively.",
+};
+
+const leftSideContent = {
+  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+  heading: "Strategic Website Content Process",
+  description:
+    "Our comprehensive approach starts with discovery, researching your business, audience, and competitors thoroughly. Next, we develop a clear strategy that defines core messaging and content framework. Writing involves crafting persuasive, on-brand copy tailored to your goals. We then optimize content for conversions and SEO to maximize performance. Finally, testing through A/B experiments helps refine key elements and improve results. This methodical process ensures your website content drives measurable success. It’s a full-cycle approach designed to build lasting engagement and growth.",
+};
 
 const page = () => {
   return (
-    <div className='w-full space-y-20 mb-20'>
-      <HeroSectionMarketing />
-      <Services
-      content={servicesContent}
-      />
-      <ContentWithLeftImage />
-      <WorkExperiances
-      content={workExperienceContent}
-      />
-      <CraftingSolution />
-      <DetailContent
-      content={detailcontent}
-      />
+    <div className="w-full space-y-20 mb-20">
+      <HeroSectionContentMarketing content={HeroSectionContent} />
+      <Services content={servicesContent} />
 
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

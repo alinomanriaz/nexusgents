@@ -1,138 +1,195 @@
-import HeroSection from '@/components/graphic-designing/HeroSection'
-import React from 'react'
+import HeroSection from "@/components/graphic-designing/HeroSection";
+import React from "react";
+import Services from "@/components/common-components/Services";
+import WorkExperiances from "@/components/common-components/WorkExperiances";
+import DetailContent from "@/components/common-components/DetailContent";
+import LeftImageWithContent from "@/components/common-components/LeftImageWithContent";
+import RightImageWithContent from "@/components/common-components/RightImageWithContent";
 import {
-    Code,
-    Database,
-    Globe,
-    Smartphone,
-    Users,
-    Zap
-} from "lucide-react"
-import Services from '@/components/common-components/Services'
-import WorkExperiances from '@/components/common-components/WorkExperiances'
-import DetailContent from '@/components/common-components/DetailContent'
+  BarChart,
+  Film,
+  Layout,
+  Monitor,
+  Palette,
+  Smartphone,
+} from "lucide-react";
 
 const heroSectionContent = {
-    title: 'We are a Result Driven Tech Company',
-    button: {
-        name: 'Get a Quate',
-        link: ''
+  title: "Innovative Creative Designs That Captivate & Convert",
+  button: {
+    name: "Start Your Project",
+    link: "/creative-design",
+  },
+  description:
+    "Boundary-pushing creative designs that tell your brand story, engage your audience, and deliver measurable business results across all platforms.",
+  client: [
+    {
+      count: 1500,
+      des: "Creative projects delivered for global brands",
     },
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam commodi facilis, reprehenderit assumenda aut, recusandae error nemo rerum accusamus, maxime iusto amet dolorum adipisci.',
-    client: [
-        {
-            count: 300,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        },
-        {
-            count: 400,
-            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, modi.'
-        }
-    ],
-    bannerImage: 'https://picsum.photos/600/400?random=3'
+    {
+      count: 97,
+      des: "Client satisfaction rate with our designs",
+    },
+  ],
+  bannerImage:
+    "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+};
 
-
-}
 const servicesContent = {
-    titles: {
-        title: 'Our SEO Services Include',
-        subtitle: 'Target the right audience at the right time.'
-    },
-    services: [
-        {
-            icon: Globe,
-            title: "Web Development",
-            description:
-                "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js",
-            features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-        },
-        {
-            icon: Smartphone,
-            title: "Mobile Development",
-            description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter",
-            features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-        },
-        {
-            icon: Database,
-            title: "Backend Development",
-            description: "Robust server-side solutions with APIs, databases, and cloud infrastructure",
-            features: ["RESTful APIs", "Database Design", "Cloud Deployment", "Security First"],
-        },
-        {
-            icon: Code,
-            title: "Full-Stack Solutions",
-            description: "End-to-end development from frontend to backend with seamless integration",
-            features: ["Complete Solutions", "Scalable Architecture", "Modern Tech Stack", "Maintenance"],
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Speed up your existing applications and improve user experience",
-            features: ["Speed Optimization", "Code Refactoring", "Performance Audit", "Best Practices"],
-        },
-        {
-            icon: Users,
-            title: "Consulting & Strategy",
-            description: "Technical consulting and strategic planning for your digital transformation",
-            features: ["Tech Strategy", "Architecture Review", "Team Training", "Best Practices"],
-        },
-    ]
-}
-const workExperienceContent = {
-    titles: {
-        title: 'Targeted Traffic and Conversion',
-        subtitle: 'Lets dive into significance of targeted tarffic and how its the key to boosting converstion'
-    },
-    paraContent: [
-        {
-            heading: 'Packaging Industry US',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://picsum.photos/600/400?random=3',
-        },
-        {
-            heading: 'Packaging industry Canada',
-            text: `Canada's packaging brands trust us — and this dashboard proves why. Real results. Real clients. From Toronto to Vancouver`,
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost',
-        },
-        {
-            heading: 'Packaging Industry in Pakistan',
-            text: 'Most packaging businesses in Pakistan still rely on calls and references. I build systems that bring orders while you sleep.',
-            image: 'https://picsum.photos/600/400?random=3'
-        },
-        {
-            heading: 'heading',
-            text: 'This is what happens when custom packaging meets smart funnels. Real orders. Real clients. Real results — straight from the US market.',
-            image: 'https://dummyimage.com/600x400/333/fff&text=Conversion+Boost'
-        },
-    ]
-}
-const detailcontent = [
+  titles: {
+    title: "Our Creative Design Services",
+    subtitle: "Comprehensive creative solutions tailored to your brand vision",
+  },
+  services: [
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
+      icon: Palette,
+      title: "Brand Identity Design",
+      description:
+        "Complete visual identity systems that communicate your brand essence",
+      features: [
+        "Logo Design",
+        "Color Systems",
+        "Typography",
+        "Brand Guidelines",
+      ],
     },
     {
-        title: 'Importance of Ecommerce Website Design for Business Expansion:',
-        description: 'Ecommerce website development has become more important as the market keeps evolving. Studies show that a well-optimized ecommerce site can increase your sales by up to 40%. An increase in sales by such a big margin can greatly boost the growth of the company. So every company needs to ensure that they are getting professional ecommerce web development services. Our team can assist you in amplifying your sales whether you need to develop a new ecommerce store or add features and reoptimize your existing one.'
-    }
-]
-const page = () => {
-    return (
-        <div className='w-full space-y-20 mb-20'>
-            <HeroSection
-                content={heroSectionContent}
-            />
-            <Services
-                content={servicesContent}
-            />
-            <WorkExperiances
-                content={workExperienceContent}
-            />
-            <DetailContent
-                content={detailcontent}
-            />
-        </div>
-    )
-}
+      icon: Layout,
+      title: "Print Design",
+      description: "Eye-catching designs for physical marketing materials",
+      features: ["Brochures", "Packaging", "Posters", "Billboards"],
+    },
+    {
+      icon: Monitor,
+      title: "Digital Design",
+      description: "Engaging designs for all digital platforms and screens",
+      features: [
+        "Website UI/UX",
+        "Social Media Graphics",
+        "Digital Ads",
+        "Email Templates",
+      ],
+    },
+    {
+      icon: Film,
+      title: "Motion Graphics",
+      description: "Dynamic animated designs that bring your message to life",
+      features: [
+        "Explainer Videos",
+        "Animated Logos",
+        "Social Media Animations",
+        "UI Animations",
+      ],
+    },
+    {
+      icon: Smartphone,
+      title: "Interactive Design",
+      description: "Immersive digital experiences that engage users",
+      features: [
+        "Micro-Interactions",
+        "AR Experiences",
+        "Interactive Infographics",
+        "WebGL Experiences",
+      ],
+    },
+    {
+      icon: BarChart,
+      title: "Data Visualization",
+      description: "Complex information made beautiful and understandable",
+      features: [
+        "Infographics",
+        "Dashboard Design",
+        "Annual Reports",
+        "Interactive Charts",
+      ],
+    },
+  ],
+};
 
-export default page
+const workExperienceContent = {
+  titles: {
+    title: "Creative Design Success Stories",
+    subtitle: "How our innovative designs have transformed brands",
+  },
+  paraContent: [
+    {
+      heading: "Tech Startup: 300% Brand Recall",
+      text: "Rebranding with bold visual identity increased recognition",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    },
+    {
+      heading: "E-commerce: 50% Higher Engagement",
+      text: "Interactive product visuals reduced bounce rates",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80",
+    },
+    {
+      heading: "Conference: 4.9/5 Attendee Feedback",
+      text: "Immersive stage design enhanced event experience",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    },
+    {
+      heading: "App: 75% More Daily Users",
+      text: "UI redesign improved usability and retention",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    },
+  ],
+  countContent: [
+    {
+      number: 200,
+      text: "Brand identities developed from scratch",
+    },
+    {
+      number: 42,
+      text: "Industry awards for creative excellence",
+    },
+  ],
+};
+
+const detailcontent = [
+  {
+    title: "The Power of Strategic Creative Design",
+    description:
+      "Exceptional creative design can increase brand recognition by up to 80% and boost conversions by 200%. But great design isn’t just about aesthetics—it’s a strategic tool. Our approach combines visual storytelling with business insight to ensure every design aligns with your brand's goals. We begin by understanding your target audience and translating your vision into compelling, high-impact visuals. Whether it's branding, marketing collateral, or digital assets, we craft each piece to resonate and perform. Every design we deliver is intentional, scalable, and built for results. It's not just about looking good—it's about making a difference through design.",
+  },
+  {
+    title: "Why Most Corporate Design Falls Flat",
+    description:
+      "Many corporate designs fail because they rely on tired templates and lack emotional connection. We flip that script by creating visual experiences that speak directly to your audience. Our team crafts unique, brand-aligned designs that balance creativity and clarity. We ensure visual consistency across platforms, pushing creative boundaries without losing strategic focus. Through user testing and real-time feedback, we refine every detail to perfection. The end result is a brand identity that cuts through noise, builds trust, and drives results. No cookie-cutter designs—just bold, effective visuals with purpose.",
+  },
+];
+
+const rightSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+  heading: "Our Creative Process",
+  description:
+    "Our creative process begins with a deep discovery phase, where we align with your brand’s mission, goals, and audience. From there, we conduct thorough research and analyze current trends to uncover visual opportunities. We then explore multiple creative directions during the concepting phase. After presenting initial ideas, we refine the strongest ones based on your input. Once a final direction is chosen, we execute pixel-perfect designs with precision and flair. We deliver all assets in optimized formats ready for use. And it doesn’t stop there—we offer continued support to evolve your creative as your business grows.",
+};
+
+const leftSideContent = {
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  heading: "Design Capabilities",
+  description:
+    "We offer a wide spectrum of design services tailored for modern brands. From developing complete brand strategies and visual identities to crafting packaging and print materials that leave a lasting impression. Our digital design capabilities span websites, apps, and social content, all rooted in UX best practices. We bring ideas to life through motion graphics, animation, and 3D renderings. Our environmental design expertise helps brands stand out in physical spaces like events or retail. We also provide direction for photography, custom illustrations, typography systems, and augmented reality experiences—making us a true end-to-end design partner.",
+};
+
+const page = () => {
+  return (
+    <div className="w-full space-y-20 mb-20">
+      <HeroSection content={heroSectionContent} />
+      <Services content={servicesContent} />
+      <LeftImageWithContent content={rightSideContent} />
+      <RightImageWithContent content={leftSideContent} />
+      <WorkExperiances content={workExperienceContent} />
+      <DetailContent content={detailcontent} />
+    </div>
+  );
+};
+
+export default page;
